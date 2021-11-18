@@ -27,10 +27,10 @@ Partial Class Form2
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.gboEnterDetails = New System.Windows.Forms.GroupBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txbLName = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txbFName = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -98,10 +98,10 @@ Partial Class Form2
         '
         'gboEnterDetails
         '
-        Me.gboEnterDetails.Controls.Add(Me.TextBox2)
+        Me.gboEnterDetails.Controls.Add(Me.txbLName)
         Me.gboEnterDetails.Controls.Add(Me.TextBox4)
         Me.gboEnterDetails.Controls.Add(Me.TextBox3)
-        Me.gboEnterDetails.Controls.Add(Me.TextBox1)
+        Me.gboEnterDetails.Controls.Add(Me.txbFName)
         Me.gboEnterDetails.Controls.Add(Me.Label2)
         Me.gboEnterDetails.Controls.Add(Me.Label12)
         Me.gboEnterDetails.Controls.Add(Me.Label5)
@@ -115,12 +115,12 @@ Partial Class Form2
         Me.gboEnterDetails.TabStop = False
         Me.gboEnterDetails.Text = "Enter Details"
         '
-        'TextBox2
+        'txbLName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(325, 58)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(215, 21)
-        Me.TextBox2.TabIndex = 4
+        Me.txbLName.Location = New System.Drawing.Point(325, 58)
+        Me.txbLName.Name = "txbLName"
+        Me.txbLName.Size = New System.Drawing.Size(215, 21)
+        Me.txbLName.TabIndex = 4
         '
         'TextBox4
         '
@@ -136,12 +136,12 @@ Partial Class Form2
         Me.TextBox3.Size = New System.Drawing.Size(215, 21)
         Me.TextBox3.TabIndex = 4
         '
-        'TextBox1
+        'txbFName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(15, 58)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(215, 21)
-        Me.TextBox1.TabIndex = 4
+        Me.txbFName.Location = New System.Drawing.Point(15, 58)
+        Me.txbFName.Name = "txbFName"
+        Me.txbFName.Size = New System.Drawing.Size(215, 21)
+        Me.txbFName.TabIndex = 4
         '
         'Label12
         '
@@ -387,8 +387,8 @@ Partial Class Form2
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents gboEnterDetails As GroupBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txbFName As TextBox
+    Friend WithEvents txbLName As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label12 As Label

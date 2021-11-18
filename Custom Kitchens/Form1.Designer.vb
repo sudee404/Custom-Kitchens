@@ -74,6 +74,8 @@ Partial Class Form1
         Me.rdoInstallation = New System.Windows.Forms.RadioButton()
         Me.rdoShipping = New System.Windows.Forms.RadioButton()
         Me.Label21 = New System.Windows.Forms.Label()
+        Me.lblShipping = New System.Windows.Forms.Label()
+        Me.btnProceed1 = New System.Windows.Forms.Button()
         Me.gbxCustomerDetails.SuspendLayout()
         Me.gbxKitchenStyles.SuspendLayout()
         Me.gbxAppliancesOptions.SuspendLayout()
@@ -242,6 +244,8 @@ Partial Class Form1
         '
         'gbxAppliancesOptions
         '
+        Me.gbxAppliancesOptions.Controls.Add(Me.btnProceed1)
+        Me.gbxAppliancesOptions.Controls.Add(Me.lblShipping)
         Me.gbxAppliancesOptions.Controls.Add(Me.gbxAmount)
         Me.gbxAppliancesOptions.Controls.Add(Me.gbxAppliances)
         Me.gbxAppliancesOptions.Controls.Add(Me.btnPurchase)
@@ -663,6 +667,25 @@ Partial Class Form1
         Me.Label21.TabIndex = 16
         Me.Label21.Text = "Ksh 95"
         '
+        'lblShipping
+        '
+        Me.lblShipping.AutoSize = True
+        Me.lblShipping.Location = New System.Drawing.Point(52, 421)
+        Me.lblShipping.Name = "lblShipping"
+        Me.lblShipping.Size = New System.Drawing.Size(0, 13)
+        Me.lblShipping.TabIndex = 10
+        '
+        'btnProceed1
+        '
+        Me.btnProceed1.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnProceed1.Location = New System.Drawing.Point(138, 369)
+        Me.btnProceed1.Name = "btnProceed1"
+        Me.btnProceed1.Size = New System.Drawing.Size(75, 23)
+        Me.btnProceed1.TabIndex = 11
+        Me.btnProceed1.Text = "Proceed"
+        Me.btnProceed1.UseVisualStyleBackColor = True
+        Me.btnProceed1.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -677,6 +700,7 @@ Partial Class Form1
         Me.gbxKitchenStyles.ResumeLayout(False)
         Me.gbxKitchenStyles.PerformLayout()
         Me.gbxAppliancesOptions.ResumeLayout(False)
+        Me.gbxAppliancesOptions.PerformLayout()
         Me.gbxAmount.ResumeLayout(False)
         Me.gbxAmount.PerformLayout()
         Me.gbxAppliances.ResumeLayout(False)
@@ -739,4 +763,6 @@ Partial Class Form1
     Friend WithEvents Label21 As Label
     Friend WithEvents rdoShipping As RadioButton
     Friend WithEvents rdoInstallation As RadioButton
+    Friend WithEvents lblShipping As Label
+    Friend WithEvents btnProceed1 As Button
 End Class

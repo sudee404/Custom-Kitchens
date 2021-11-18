@@ -183,6 +183,7 @@
 
     Private Sub btnProceed_Click(sender As Object, e As EventArgs) Handles btnProceed.Click
         Dim counterTopPrice As Integer = 0
+        lblRemind.Text = ""
 
         If gbxCountertops.Visible Then
             total = 0
@@ -245,8 +246,15 @@
         Return itemCost
     End Function
 
+
+    Private Sub btnProceed1_Click(sender As Object, e As EventArgs) Handles btnProceed1.Click
+        Me.Hide()
+        Form2.Show()
+    End Sub
+
     Private Sub refreshPrice() Handles btnPurchase.Click
         Dim cost As Integer = 0
+        lblShipping.Text = ""
         If cboApp1.Checked Then
             cost += getItemCost(cboApp1.Text)
         End If
@@ -273,26 +281,23 @@
 
         If rdoInstallation.Checked Then
             cost += getInstallationCost()
+            gbxAmount.Visible = True
+            btnProceed1.Visible = True
 
-        End If
-        If rdoShipping.Checked Then
+
+        ElseIf rdoShipping.Checked Then
             cost += 95
+            gbxAmount.Visible = True
+            btnProceed1.Visible = True
+
+        Else
+            lblShipping.Text = "Please pick between Shipping and Installation"
 
         End If
 
         totalCost = total + cost
         lblTotalCost.Text = $"{totalCost}"
-        gbxAmount.Visible = True
-
 
     End Sub
-
-    Private Sub refreshPrice1()
-        Me.Hide()
-        Form2.Show()
-    End Sub
-
-
-
 
 End Class
