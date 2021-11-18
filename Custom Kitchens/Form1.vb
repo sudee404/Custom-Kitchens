@@ -3,8 +3,11 @@
     Dim prices() As Integer = {3500, 4500, 5750, 6500, 7750, 9500, 8250, 9500, 12500, 1000, 1500, 2200, 5250, 6200, 8000, 6750, 8500, 11000, 12500, 15000, 23000}
     Dim appliances() As String = {"Basic Fridge Freezer", "American Style Fridge Freezer", "Hob", "Single Oven", "Double Oven", "Dishwasher"}
     Dim appliancePrices() As Integer = {180, 750, 400, 340, 550, 270}
+    Dim appliancesCostTotal As Integer
     Dim installationCosts() As Integer = {1250, 2750, 3750, 750, 1500, 2500, 4750}
+    Dim installationPrice As Integer
     Dim Counterpricelist(3) As Integer
+    Dim chosenStyle As String
     Dim total As Double
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
@@ -136,6 +139,7 @@
 
         Dim n, pricelist(3) As Integer
         n = 0
+        chosenStyle = text
         If (text.Equals(styles(0))) Then
             For counter = 0 To 2
                 pricelist(n) = prices(counter)
@@ -182,10 +186,12 @@
         Dim counterTopPrice As Integer = 0
 
         If gbxCountertops.Visible Then
-
+            total = 0
             If rdbLaminate.Checked Then
                 counterTopPrice = Counterpricelist(0)
                 gbxAppliancesOptions.Visible = True
+
+
 
             ElseIf rdbWoodBlk.Checked Then
                 counterTopPrice = Counterpricelist(1)
@@ -205,12 +211,47 @@
             'add more code
 
         End If
-
+        total += counterTopPrice
+        lblInstallationPrice.Text += $"{getInstallationCost()}"
 
 
     End Sub
+    Function getInstallationCost() As Integer
+        For counter = 0 To 6
+            If chosenStyle.Equals(kitchenStyle(counter)) Then
+                installationPrice = installationCosts(counter)
+            End If
+        Next
+        Return installationPrice
+    End Function
 
-    Private Sub btnProceed1_Click(sender As Object, e As EventArgs) Handles btnProceed1.Click
+    Function getItemCost(ByVal itemname As String) As Integer
+        Dim itemCost As Integer
+
+        For counter = 0 To 5
+            If itemname.Equals(appliances(counter)) Then
+                itemCost = appliancePrices(counter)
+            End If
+        Next
+        Return itemCost
+    End Function
+    Private Sub getCheckedItemsPrices() Handles gbxAppliances.MouseMove
+        Dim rdbx As New RadioButton
+
+        For Each rdb In gbxAppliances.Controls
+            Try
+                If rdb.Checked Then
+                    appliancesCostTotal += getItemCost(rdb.Text)
+                End If
+            Catch ex As Exception
+
+
+            End Try
+        Next
+    End Sub
+
+
+    Private Sub btnProceed1_Click(sender As Object, e As EventArgs) Handles btnPurchase.Click
         Me.Hide()
         Form2.Show()
     End Sub

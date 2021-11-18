@@ -40,10 +40,10 @@ Partial Class Form1
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.lblTotalCost = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.gbxInstallation = New System.Windows.Forms.GroupBox()
         Me.lblInstallationPrice = New System.Windows.Forms.Label()
         Me.cboInstallation = New System.Windows.Forms.CheckBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gbxAppliances = New System.Windows.Forms.GroupBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -57,7 +57,7 @@ Partial Class Form1
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.btnProceed1 = New System.Windows.Forms.Button()
+        Me.btnPurchase = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btnProceed = New System.Windows.Forms.Button()
         Me.gbxCountertops = New System.Windows.Forms.GroupBox()
@@ -76,8 +76,8 @@ Partial Class Form1
         Me.gbxKitchenStyles.SuspendLayout()
         Me.gbxAppliancesOptions.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.gbxInstallation.SuspendLayout()
+        Me.gbxAppliances.SuspendLayout()
         Me.gbxCountertops.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -242,9 +242,9 @@ Partial Class Form1
         'gbxAppliancesOptions
         '
         Me.gbxAppliancesOptions.Controls.Add(Me.GroupBox3)
-        Me.gbxAppliancesOptions.Controls.Add(Me.GroupBox2)
-        Me.gbxAppliancesOptions.Controls.Add(Me.GroupBox1)
-        Me.gbxAppliancesOptions.Controls.Add(Me.btnProceed1)
+        Me.gbxAppliancesOptions.Controls.Add(Me.gbxInstallation)
+        Me.gbxAppliancesOptions.Controls.Add(Me.gbxAppliances)
+        Me.gbxAppliancesOptions.Controls.Add(Me.btnPurchase)
         Me.gbxAppliancesOptions.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbxAppliancesOptions.Location = New System.Drawing.Point(0, 0)
         Me.gbxAppliancesOptions.Name = "gbxAppliancesOptions"
@@ -285,17 +285,17 @@ Partial Class Form1
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "Total Cost : "
         '
-        'GroupBox2
+        'gbxInstallation
         '
-        Me.GroupBox2.Controls.Add(Me.lblInstallationPrice)
-        Me.GroupBox2.Controls.Add(Me.cboInstallation)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(7, 207)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(368, 66)
-        Me.GroupBox2.TabIndex = 8
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Installation Services"
+        Me.gbxInstallation.Controls.Add(Me.lblInstallationPrice)
+        Me.gbxInstallation.Controls.Add(Me.cboInstallation)
+        Me.gbxInstallation.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbxInstallation.Location = New System.Drawing.Point(7, 207)
+        Me.gbxInstallation.Name = "gbxInstallation"
+        Me.gbxInstallation.Size = New System.Drawing.Size(368, 66)
+        Me.gbxInstallation.TabIndex = 8
+        Me.gbxInstallation.TabStop = False
+        Me.gbxInstallation.Text = "Installation Services"
         '
         'lblInstallationPrice
         '
@@ -318,28 +318,28 @@ Partial Class Form1
         Me.cboInstallation.Text = "Cost :"
         Me.cboInstallation.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'gbxAppliances
         '
-        Me.GroupBox1.Controls.Add(Me.Label18)
-        Me.GroupBox1.Controls.Add(Me.Label17)
-        Me.GroupBox1.Controls.Add(Me.Label16)
-        Me.GroupBox1.Controls.Add(Me.Label15)
-        Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.CheckBox6)
-        Me.GroupBox1.Controls.Add(Me.CheckBox5)
-        Me.GroupBox1.Controls.Add(Me.CheckBox4)
-        Me.GroupBox1.Controls.Add(Me.CheckBox3)
-        Me.GroupBox1.Controls.Add(Me.CheckBox2)
-        Me.GroupBox1.Controls.Add(Me.CheckBox1)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(7, 21)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(368, 180)
-        Me.GroupBox1.TabIndex = 7
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Appliances"
+        Me.gbxAppliances.Controls.Add(Me.Label18)
+        Me.gbxAppliances.Controls.Add(Me.Label17)
+        Me.gbxAppliances.Controls.Add(Me.Label16)
+        Me.gbxAppliances.Controls.Add(Me.Label15)
+        Me.gbxAppliances.Controls.Add(Me.Label12)
+        Me.gbxAppliances.Controls.Add(Me.Label11)
+        Me.gbxAppliances.Controls.Add(Me.Label10)
+        Me.gbxAppliances.Controls.Add(Me.CheckBox6)
+        Me.gbxAppliances.Controls.Add(Me.CheckBox5)
+        Me.gbxAppliances.Controls.Add(Me.CheckBox4)
+        Me.gbxAppliances.Controls.Add(Me.CheckBox3)
+        Me.gbxAppliances.Controls.Add(Me.CheckBox2)
+        Me.gbxAppliances.Controls.Add(Me.CheckBox1)
+        Me.gbxAppliances.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbxAppliances.Location = New System.Drawing.Point(7, 21)
+        Me.gbxAppliances.Name = "gbxAppliances"
+        Me.gbxAppliances.Size = New System.Drawing.Size(368, 180)
+        Me.gbxAppliances.TabIndex = 7
+        Me.gbxAppliances.TabStop = False
+        Me.gbxAppliances.Text = "Appliances"
         '
         'Label18
         '
@@ -476,15 +476,15 @@ Partial Class Form1
         Me.CheckBox1.Text = "Basic Fridge Freezer"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'btnProceed1
+        'btnPurchase
         '
-        Me.btnProceed1.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProceed1.Location = New System.Drawing.Point(138, 382)
-        Me.btnProceed1.Name = "btnProceed1"
-        Me.btnProceed1.Size = New System.Drawing.Size(75, 23)
-        Me.btnProceed1.TabIndex = 6
-        Me.btnProceed1.Text = "Purchase"
-        Me.btnProceed1.UseVisualStyleBackColor = True
+        Me.btnPurchase.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPurchase.Location = New System.Drawing.Point(138, 382)
+        Me.btnPurchase.Name = "btnPurchase"
+        Me.btnPurchase.Size = New System.Drawing.Size(75, 23)
+        Me.btnPurchase.TabIndex = 6
+        Me.btnPurchase.Text = "Purchase"
+        Me.btnPurchase.UseVisualStyleBackColor = True
         '
         'Label13
         '
@@ -655,10 +655,10 @@ Partial Class Form1
         Me.gbxAppliancesOptions.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.gbxInstallation.ResumeLayout(False)
+        Me.gbxInstallation.PerformLayout()
+        Me.gbxAppliances.ResumeLayout(False)
+        Me.gbxAppliances.PerformLayout()
         Me.gbxCountertops.ResumeLayout(False)
         Me.gbxCountertops.PerformLayout()
         Me.ResumeLayout(False)
@@ -674,7 +674,7 @@ Partial Class Form1
     Friend WithEvents gbxBox As GroupBox
     Friend WithEvents gbxAppliancesOptions As GroupBox
     Friend WithEvents gbxCountertops As GroupBox
-    Friend WithEvents btnProceed1 As Button
+    Friend WithEvents btnPurchase As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents lblGranitePrice As Label
     Friend WithEvents lblWoodPrice As Label
@@ -695,7 +695,7 @@ Partial Class Form1
     Friend WithEvents Label9 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents lblRemind As Label
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents gbxAppliances As GroupBox
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Label18 As Label
     Friend WithEvents Label17 As Label
@@ -709,7 +709,7 @@ Partial Class Form1
     Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents gbxInstallation As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents lblTotalCost As Label
     Friend WithEvents Label19 As Label
