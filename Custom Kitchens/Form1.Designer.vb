@@ -38,19 +38,6 @@ Partial Class Form1
         Me.lblRemind = New System.Windows.Forms.Label()
         Me.gbxAppliancesOptions = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.btnProceed1 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btnProceed = New System.Windows.Forms.Button()
@@ -66,12 +53,7 @@ Partial Class Form1
         Me.lblLaminatePrice = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.gbxBox = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.cboInstallation = New System.Windows.Forms.CheckBox()
-        Me.lblInstallationPrice = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.lblTotalCost = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.gbxCustomerDetails.SuspendLayout()
         Me.gbxKitchenStyles.SuspendLayout()
         Me.gbxAppliancesOptions.SuspendLayout()
@@ -412,6 +394,16 @@ Partial Class Form1
         Me.CheckBox1.Text = "Basic Fridge Freezer"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(17, 19)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(142, 17)
+        Me.CheckBox1.TabIndex = 0
+        Me.CheckBox1.Text = "Basic Fridge Freezer"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'btnProceed1
         '
         Me.btnProceed1.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -575,69 +567,15 @@ Partial Class Form1
         Me.gbxBox.TabIndex = 7
         Me.gbxBox.TabStop = False
         '
-        'GroupBox2
+        'CheckBox1
         '
-        Me.GroupBox2.Controls.Add(Me.lblInstallationPrice)
-        Me.GroupBox2.Controls.Add(Me.cboInstallation)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(7, 207)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(368, 66)
-        Me.GroupBox2.TabIndex = 8
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Installation Services"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.lblTotalCost)
-        Me.GroupBox3.Controls.Add(Me.Label19)
-        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(7, 279)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(368, 74)
-        Me.GroupBox3.TabIndex = 9
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Amount"
-        '
-        'cboInstallation
-        '
-        Me.cboInstallation.AutoSize = True
-        Me.cboInstallation.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboInstallation.Location = New System.Drawing.Point(9, 25)
-        Me.cboInstallation.Name = "cboInstallation"
-        Me.cboInstallation.Size = New System.Drawing.Size(53, 17)
-        Me.cboInstallation.TabIndex = 2
-        Me.cboInstallation.Text = "Cost :"
-        Me.cboInstallation.UseVisualStyleBackColor = True
-        '
-        'lblInstallationPrice
-        '
-        Me.lblInstallationPrice.AutoSize = True
-        Me.lblInstallationPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInstallationPrice.Location = New System.Drawing.Point(61, 26)
-        Me.lblInstallationPrice.Name = "lblInstallationPrice"
-        Me.lblInstallationPrice.Size = New System.Drawing.Size(28, 13)
-        Me.lblInstallationPrice.TabIndex = 3
-        Me.lblInstallationPrice.Text = "Ksh "
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(6, 32)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(77, 13)
-        Me.Label19.TabIndex = 0
-        Me.Label19.Text = "Total Cost : "
-        '
-        'lblTotalCost
-        '
-        Me.lblTotalCost.AutoSize = True
-        Me.lblTotalCost.Location = New System.Drawing.Point(89, 32)
-        Me.lblTotalCost.Name = "lblTotalCost"
-        Me.lblTotalCost.Size = New System.Drawing.Size(32, 13)
-        Me.lblTotalCost.TabIndex = 1
-        Me.lblTotalCost.Text = "Ksh "
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(17, 19)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(142, 17)
+        Me.CheckBox1.TabIndex = 0
+        Me.CheckBox1.Text = "Basic Fridge Freezer"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Form1
         '
