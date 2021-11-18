@@ -208,5 +208,8 @@
 
     End Sub
 
-
+    Private Sub btnProceed1_Click(sender As Object, e As EventArgs) Handles btnProceed1.Click
+        Me.Hide()
+        Form2.Show()
+    End Sub
 End Class

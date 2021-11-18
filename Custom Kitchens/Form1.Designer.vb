@@ -38,6 +38,7 @@ Partial Class Form1
         Me.lblRemind = New System.Windows.Forms.Label()
         Me.gbxCountertopOptions = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.btnProceed1 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btnProceed = New System.Windows.Forms.Button()
@@ -53,7 +54,6 @@ Partial Class Form1
         Me.lblLaminatePrice = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.gbxBox = New System.Windows.Forms.GroupBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.gbxCustomerDetails.SuspendLayout()
         Me.gbxKitchenStyles.SuspendLayout()
         Me.gbxCountertopOptions.SuspendLayout()
@@ -243,6 +243,16 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "( Optional )"
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(17, 19)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(142, 17)
+        Me.CheckBox1.TabIndex = 0
+        Me.CheckBox1.Text = "Basic Fridge Freezer"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'btnProceed1
         '
         Me.btnProceed1.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -405,16 +415,6 @@ Partial Class Form1
         Me.gbxBox.Size = New System.Drawing.Size(278, 191)
         Me.gbxBox.TabIndex = 7
         Me.gbxBox.TabStop = False
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(17, 19)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(142, 17)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "Basic Fridge Freezer"
-        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Form1
         '
