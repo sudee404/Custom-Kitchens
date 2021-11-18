@@ -36,8 +36,26 @@ Partial Class Form1
         Me.rmLength = New System.Windows.Forms.TextBox()
         Me.gbxKitchenStyles = New System.Windows.Forms.GroupBox()
         Me.lblRemind = New System.Windows.Forms.Label()
-        Me.gbxCountertopOptions = New System.Windows.Forms.GroupBox()
+        Me.gbxAppliancesOptions = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.lblTotalCost = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblInstallationPrice = New System.Windows.Forms.Label()
+        Me.cboInstallation = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.btnProceed1 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -56,7 +74,9 @@ Partial Class Form1
         Me.gbxBox = New System.Windows.Forms.GroupBox()
         Me.gbxCustomerDetails.SuspendLayout()
         Me.gbxKitchenStyles.SuspendLayout()
-        Me.gbxCountertopOptions.SuspendLayout()
+        Me.gbxAppliancesOptions.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.gbxCountertops.SuspendLayout()
         Me.SuspendLayout()
@@ -197,7 +217,7 @@ Partial Class Form1
         'gbxKitchenStyles
         '
         Me.gbxKitchenStyles.Controls.Add(Me.lblRemind)
-        Me.gbxKitchenStyles.Controls.Add(Me.gbxCountertopOptions)
+        Me.gbxKitchenStyles.Controls.Add(Me.gbxAppliancesOptions)
         Me.gbxKitchenStyles.Controls.Add(Me.Label13)
         Me.gbxKitchenStyles.Controls.Add(Me.btnProceed)
         Me.gbxKitchenStyles.Controls.Add(Me.gbxCountertops)
@@ -219,36 +239,239 @@ Partial Class Form1
         Me.lblRemind.Size = New System.Drawing.Size(0, 15)
         Me.lblRemind.TabIndex = 9
         '
-        'gbxCountertopOptions
+        'gbxAppliancesOptions
         '
-        Me.gbxCountertopOptions.Controls.Add(Me.GroupBox1)
-        Me.gbxCountertopOptions.Controls.Add(Me.btnProceed1)
-        Me.gbxCountertopOptions.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbxCountertopOptions.Location = New System.Drawing.Point(0, 0)
-        Me.gbxCountertopOptions.Name = "gbxCountertopOptions"
-        Me.gbxCountertopOptions.Size = New System.Drawing.Size(400, 450)
-        Me.gbxCountertopOptions.TabIndex = 9
-        Me.gbxCountertopOptions.TabStop = False
-        Me.gbxCountertopOptions.Text = "Countertop Options"
-        Me.gbxCountertopOptions.Visible = False
+        Me.gbxAppliancesOptions.Controls.Add(Me.GroupBox3)
+        Me.gbxAppliancesOptions.Controls.Add(Me.GroupBox2)
+        Me.gbxAppliancesOptions.Controls.Add(Me.GroupBox1)
+        Me.gbxAppliancesOptions.Controls.Add(Me.btnProceed1)
+        Me.gbxAppliancesOptions.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbxAppliancesOptions.Location = New System.Drawing.Point(0, 0)
+        Me.gbxAppliancesOptions.Name = "gbxAppliancesOptions"
+        Me.gbxAppliancesOptions.Size = New System.Drawing.Size(400, 450)
+        Me.gbxAppliancesOptions.TabIndex = 9
+        Me.gbxAppliancesOptions.TabStop = False
+        Me.gbxAppliancesOptions.Text = "Installation and Other Appliances (Optional)"
+        Me.gbxAppliancesOptions.Visible = False
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.lblTotalCost)
+        Me.GroupBox3.Controls.Add(Me.Label19)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(7, 279)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(368, 74)
+        Me.GroupBox3.TabIndex = 9
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Amount"
+        '
+        'lblTotalCost
+        '
+        Me.lblTotalCost.AutoSize = True
+        Me.lblTotalCost.Location = New System.Drawing.Point(89, 32)
+        Me.lblTotalCost.Name = "lblTotalCost"
+        Me.lblTotalCost.Size = New System.Drawing.Size(32, 13)
+        Me.lblTotalCost.TabIndex = 1
+        Me.lblTotalCost.Text = "Ksh "
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(6, 32)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(77, 13)
+        Me.Label19.TabIndex = 0
+        Me.Label19.Text = "Total Cost : "
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.lblInstallationPrice)
+        Me.GroupBox2.Controls.Add(Me.cboInstallation)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(7, 207)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(368, 66)
+        Me.GroupBox2.TabIndex = 8
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Installation Services"
+        '
+        'lblInstallationPrice
+        '
+        Me.lblInstallationPrice.AutoSize = True
+        Me.lblInstallationPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInstallationPrice.Location = New System.Drawing.Point(61, 26)
+        Me.lblInstallationPrice.Name = "lblInstallationPrice"
+        Me.lblInstallationPrice.Size = New System.Drawing.Size(28, 13)
+        Me.lblInstallationPrice.TabIndex = 3
+        Me.lblInstallationPrice.Text = "Ksh "
+        '
+        'cboInstallation
+        '
+        Me.cboInstallation.AutoSize = True
+        Me.cboInstallation.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboInstallation.Location = New System.Drawing.Point(9, 25)
+        Me.cboInstallation.Name = "cboInstallation"
+        Me.cboInstallation.Size = New System.Drawing.Size(53, 17)
+        Me.cboInstallation.TabIndex = 2
+        Me.cboInstallation.Text = "Cost :"
+        Me.cboInstallation.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label18)
+        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Controls.Add(Me.Label15)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.CheckBox6)
+        Me.GroupBox1.Controls.Add(Me.CheckBox5)
+        Me.GroupBox1.Controls.Add(Me.CheckBox4)
+        Me.GroupBox1.Controls.Add(Me.CheckBox3)
+        Me.GroupBox1.Controls.Add(Me.CheckBox2)
         Me.GroupBox1.Controls.Add(Me.CheckBox1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(7, 21)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(368, 199)
+        Me.GroupBox1.Size = New System.Drawing.Size(368, 180)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "( Optional )"
+        Me.GroupBox1.Text = "Appliances"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(218, 107)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(46, 13)
+        Me.Label18.TabIndex = 12
+        Me.Label18.Text = "Ksh 340"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(218, 61)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(46, 13)
+        Me.Label17.TabIndex = 11
+        Me.Label17.Text = "Ksh 750"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(218, 130)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(46, 13)
+        Me.Label16.TabIndex = 10
+        Me.Label16.Text = "Ksh 550"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(218, 153)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(46, 13)
+        Me.Label15.TabIndex = 9
+        Me.Label15.Text = "Ksh 270"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(218, 84)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(46, 13)
+        Me.Label12.TabIndex = 8
+        Me.Label12.Text = "Ksh 400"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(218, 39)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(46, 13)
+        Me.Label11.TabIndex = 7
+        Me.Label11.Text = "Ksh 180"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(220, 16)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(36, 13)
+        Me.Label10.TabIndex = 6
+        Me.Label10.Text = "Price"
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox6.Location = New System.Drawing.Point(9, 152)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox6.TabIndex = 5
+        Me.CheckBox6.Text = "Dishwasher"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox5.Location = New System.Drawing.Point(9, 129)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(89, 17)
+        Me.CheckBox5.TabIndex = 4
+        Me.CheckBox5.Text = "Double Oven"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox4.Location = New System.Drawing.Point(9, 106)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(84, 17)
+        Me.CheckBox4.TabIndex = 3
+        Me.CheckBox4.Text = "Single Oven"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox3.Location = New System.Drawing.Point(9, 83)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(46, 17)
+        Me.CheckBox3.TabIndex = 2
+        Me.CheckBox3.Text = "Hob"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.Location = New System.Drawing.Point(9, 60)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(166, 17)
+        Me.CheckBox2.TabIndex = 1
+        Me.CheckBox2.Text = "American Style Fridge Freezer"
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(17, 19)
+        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(9, 32)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(142, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(122, 17)
         Me.CheckBox1.TabIndex = 0
         Me.CheckBox1.Text = "Basic Fridge Freezer"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -256,7 +479,7 @@ Partial Class Form1
         'btnProceed1
         '
         Me.btnProceed1.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProceed1.Location = New System.Drawing.Point(138, 396)
+        Me.btnProceed1.Location = New System.Drawing.Point(138, 382)
         Me.btnProceed1.Name = "btnProceed1"
         Me.btnProceed1.Size = New System.Drawing.Size(75, 23)
         Me.btnProceed1.TabIndex = 6
@@ -429,7 +652,11 @@ Partial Class Form1
         Me.gbxCustomerDetails.PerformLayout()
         Me.gbxKitchenStyles.ResumeLayout(False)
         Me.gbxKitchenStyles.PerformLayout()
-        Me.gbxCountertopOptions.ResumeLayout(False)
+        Me.gbxAppliancesOptions.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.gbxCountertops.ResumeLayout(False)
@@ -445,7 +672,7 @@ Partial Class Form1
     Friend WithEvents rmLength As TextBox
     Friend WithEvents gbxKitchenStyles As GroupBox
     Friend WithEvents gbxBox As GroupBox
-    Friend WithEvents gbxCountertopOptions As GroupBox
+    Friend WithEvents gbxAppliancesOptions As GroupBox
     Friend WithEvents gbxCountertops As GroupBox
     Friend WithEvents btnProceed1 As Button
     Friend WithEvents Label5 As Label
@@ -470,4 +697,22 @@ Partial Class Form1
     Friend WithEvents lblRemind As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents CheckBox6 As CheckBox
+    Friend WithEvents CheckBox5 As CheckBox
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents lblTotalCost As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents lblInstallationPrice As Label
+    Friend WithEvents cboInstallation As CheckBox
 End Class
