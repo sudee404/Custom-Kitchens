@@ -1,6 +1,7 @@
 ﻿Public Class Form1
     Dim kitchenStyle() As String = {"Small L-shaped Kitchen", "Medium L-shaped Kitchen", "Large L-shaped Kitchen", "Small Straight Kitchen", "Medium Straight Kitchen", "Large Straight Kitchen", "Large Island Kitchen"}
     Dim prices() As Integer = {3500, 4500, 5750, 6500, 7750, 9500, 8250, 9500, 12500, 1000, 1500, 2200, 5250, 6200, 8000, 6750, 8500, 11000, 12500, 15000, 23000}
+    Dim appliances() As String = {"Basic Fridge Freezer", "American Style Fridge Freezer", "Hob", "Single Oven", "Double Oven", "Dishwasher"}
     Dim Counterpricelist(3) As Integer
     Dim total As Double
 
@@ -182,12 +183,15 @@
 
             If rdbLaminate.Checked Then
                 counterTopPrice = Counterpricelist(0)
+                gbxCountertopOptions.Visible = True
 
             ElseIf rdbWoodBlk.Checked Then
                 counterTopPrice = Counterpricelist(1)
+                gbxCountertopOptions.Visible = True
 
             ElseIf rdbGranite.Checked Then
                 counterTopPrice = Counterpricelist(2)
+                gbxCountertopOptions.Visible = True
 
             Else
                 lblRemind.Text = "Please select a countertop to proceed"
