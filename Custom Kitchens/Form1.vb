@@ -3,12 +3,11 @@
     Dim prices() As Integer = {3500, 4500, 5750, 6500, 7750, 9500, 8250, 9500, 12500, 1000, 1500, 2200, 5250, 6200, 8000, 6750, 8500, 11000, 12500, 15000, 23000}
     Dim appliances() As String = {"Basic Fridge Freezer", "American Style Fridge Freezer", "Hob", "Single Oven", "Double Oven", "Dishwasher"}
     Dim appliancePrices() As Integer = {180, 750, 400, 340, 550, 270}
-    Dim appliancesCostTotal As Integer
     Dim installationCosts() As Integer = {1250, 2750, 3750, 750, 1500, 2500, 4750}
     Dim installationPrice As Integer
     Dim Counterpricelist(3) As Integer
     Dim chosenStyle As String
-    Dim total As Double
+    Dim total, totalCost As Double
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
 
@@ -190,16 +189,25 @@
             If rdbLaminate.Checked Then
                 counterTopPrice = Counterpricelist(0)
                 gbxAppliancesOptions.Visible = True
+                total = counterTopPrice
+                lblTotalCost.Text = $"{total}"
+                lblInstallationPrice.Text += $"{getInstallationCost()}"
 
 
 
             ElseIf rdbWoodBlk.Checked Then
                 counterTopPrice = Counterpricelist(1)
                 gbxAppliancesOptions.Visible = True
+                total = counterTopPrice
+                lblTotalCost.Text = $"{total}"
+                lblInstallationPrice.Text += $"{getInstallationCost()}"
 
             ElseIf rdbGranite.Checked Then
                 counterTopPrice = Counterpricelist(2)
                 gbxAppliancesOptions.Visible = True
+                total = counterTopPrice
+                lblTotalCost.Text = $"{total}"
+                lblInstallationPrice.Text += $"{getInstallationCost()}"
 
             Else
                 lblRemind.Text = "Please select a countertop to proceed"
@@ -211,11 +219,12 @@
             'add more code
 
         End If
-        total += counterTopPrice
-        lblInstallationPrice.Text += $"{getInstallationCost()}"
+
+
 
 
     End Sub
+
     Function getInstallationCost() As Integer
         For counter = 0 To 6
             If chosenStyle.Equals(kitchenStyle(counter)) Then
@@ -235,24 +244,55 @@
         Next
         Return itemCost
     End Function
-    Private Sub getCheckedItemsPrices() Handles gbxAppliances.MouseMove
-        Dim rdbx As New RadioButton
 
-        For Each rdb In gbxAppliances.Controls
-            Try
-                If rdb.Checked Then
-                    appliancesCostTotal += getItemCost(rdb.Text)
-                End If
-            Catch ex As Exception
+    Private Sub refreshPrice() Handles btnPurchase.Click
+        Dim cost As Integer = 0
+        If cboApp1.Checked Then
+            cost += getItemCost(cboApp1.Text)
+        End If
+
+        If cboApp2.Checked Then
+            cost += getItemCost(cboApp2.Text)
+        End If
+
+        If cboApp3.Checked Then
+            cost += getItemCost(cboApp3.Text)
+        End If
+
+        If cboApp4.Checked Then
+            cost += getItemCost(cboApp4.Text)
+        End If
+
+        If cboApp5.Checked Then
+            cost += getItemCost(cboApp5.Text)
+        End If
+
+        If cboApp6.Checked Then
+            cost += getItemCost(cboApp6.Text)
+        End If
+
+        If rdoInstallation.Checked Then
+            cost += getInstallationCost()
+
+        End If
+        If rdoShipping.Checked Then
+            cost += 95
+
+        End If
+
+        totalCost = total + cost
+        lblTotalCost.Text = $"{totalCost}"
+        gbxAmount.Visible = True
 
 
-            End Try
-        Next
     End Sub
 
-
-    Private Sub btnProceed1_Click(sender As Object, e As EventArgs) Handles btnPurchase.Click
+    Private Sub refreshPrice1()
         Me.Hide()
         Form2.Show()
     End Sub
+
+
+
+
 End Class

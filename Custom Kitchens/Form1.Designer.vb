@@ -37,13 +37,12 @@ Partial Class Form1
         Me.gbxKitchenStyles = New System.Windows.Forms.GroupBox()
         Me.lblRemind = New System.Windows.Forms.Label()
         Me.gbxAppliancesOptions = New System.Windows.Forms.GroupBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.gbxAmount = New System.Windows.Forms.GroupBox()
         Me.lblTotalCost = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.gbxInstallation = New System.Windows.Forms.GroupBox()
-        Me.lblInstallationPrice = New System.Windows.Forms.Label()
-        Me.cboInstallation = New System.Windows.Forms.CheckBox()
         Me.gbxAppliances = New System.Windows.Forms.GroupBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.lblInstallationPrice = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -51,12 +50,12 @@ Partial Class Form1
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.cboApp6 = New System.Windows.Forms.CheckBox()
+        Me.cboApp5 = New System.Windows.Forms.CheckBox()
+        Me.cboApp4 = New System.Windows.Forms.CheckBox()
+        Me.cboApp3 = New System.Windows.Forms.CheckBox()
+        Me.cboApp2 = New System.Windows.Forms.CheckBox()
+        Me.cboApp1 = New System.Windows.Forms.CheckBox()
         Me.btnPurchase = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btnProceed = New System.Windows.Forms.Button()
@@ -72,11 +71,13 @@ Partial Class Form1
         Me.lblLaminatePrice = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.gbxBox = New System.Windows.Forms.GroupBox()
+        Me.rdoInstallation = New System.Windows.Forms.RadioButton()
+        Me.rdoShipping = New System.Windows.Forms.RadioButton()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.gbxCustomerDetails.SuspendLayout()
         Me.gbxKitchenStyles.SuspendLayout()
         Me.gbxAppliancesOptions.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.gbxInstallation.SuspendLayout()
+        Me.gbxAmount.SuspendLayout()
         Me.gbxAppliances.SuspendLayout()
         Me.gbxCountertops.SuspendLayout()
         Me.SuspendLayout()
@@ -241,8 +242,7 @@ Partial Class Form1
         '
         'gbxAppliancesOptions
         '
-        Me.gbxAppliancesOptions.Controls.Add(Me.GroupBox3)
-        Me.gbxAppliancesOptions.Controls.Add(Me.gbxInstallation)
+        Me.gbxAppliancesOptions.Controls.Add(Me.gbxAmount)
         Me.gbxAppliancesOptions.Controls.Add(Me.gbxAppliances)
         Me.gbxAppliancesOptions.Controls.Add(Me.btnPurchase)
         Me.gbxAppliancesOptions.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -254,17 +254,18 @@ Partial Class Form1
         Me.gbxAppliancesOptions.Text = "Installation and Other Appliances (Optional)"
         Me.gbxAppliancesOptions.Visible = False
         '
-        'GroupBox3
+        'gbxAmount
         '
-        Me.GroupBox3.Controls.Add(Me.lblTotalCost)
-        Me.GroupBox3.Controls.Add(Me.Label19)
-        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(7, 279)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(368, 74)
-        Me.GroupBox3.TabIndex = 9
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Amount"
+        Me.gbxAmount.Controls.Add(Me.lblTotalCost)
+        Me.gbxAmount.Controls.Add(Me.Label19)
+        Me.gbxAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbxAmount.Location = New System.Drawing.Point(7, 279)
+        Me.gbxAmount.Name = "gbxAmount"
+        Me.gbxAmount.Size = New System.Drawing.Size(368, 74)
+        Me.gbxAmount.TabIndex = 9
+        Me.gbxAmount.TabStop = False
+        Me.gbxAmount.Text = "Amount"
+        Me.gbxAmount.Visible = False
         '
         'lblTotalCost
         '
@@ -285,41 +286,13 @@ Partial Class Form1
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "Total Cost : "
         '
-        'gbxInstallation
-        '
-        Me.gbxInstallation.Controls.Add(Me.lblInstallationPrice)
-        Me.gbxInstallation.Controls.Add(Me.cboInstallation)
-        Me.gbxInstallation.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbxInstallation.Location = New System.Drawing.Point(7, 207)
-        Me.gbxInstallation.Name = "gbxInstallation"
-        Me.gbxInstallation.Size = New System.Drawing.Size(368, 66)
-        Me.gbxInstallation.TabIndex = 8
-        Me.gbxInstallation.TabStop = False
-        Me.gbxInstallation.Text = "Installation Services"
-        '
-        'lblInstallationPrice
-        '
-        Me.lblInstallationPrice.AutoSize = True
-        Me.lblInstallationPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInstallationPrice.Location = New System.Drawing.Point(61, 26)
-        Me.lblInstallationPrice.Name = "lblInstallationPrice"
-        Me.lblInstallationPrice.Size = New System.Drawing.Size(28, 13)
-        Me.lblInstallationPrice.TabIndex = 3
-        Me.lblInstallationPrice.Text = "Ksh "
-        '
-        'cboInstallation
-        '
-        Me.cboInstallation.AutoSize = True
-        Me.cboInstallation.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboInstallation.Location = New System.Drawing.Point(9, 25)
-        Me.cboInstallation.Name = "cboInstallation"
-        Me.cboInstallation.Size = New System.Drawing.Size(53, 17)
-        Me.cboInstallation.TabIndex = 2
-        Me.cboInstallation.Text = "Cost :"
-        Me.cboInstallation.UseVisualStyleBackColor = True
-        '
         'gbxAppliances
         '
+        Me.gbxAppliances.Controls.Add(Me.Label21)
+        Me.gbxAppliances.Controls.Add(Me.rdoShipping)
+        Me.gbxAppliances.Controls.Add(Me.rdoInstallation)
+        Me.gbxAppliances.Controls.Add(Me.Label20)
+        Me.gbxAppliances.Controls.Add(Me.lblInstallationPrice)
         Me.gbxAppliances.Controls.Add(Me.Label18)
         Me.gbxAppliances.Controls.Add(Me.Label17)
         Me.gbxAppliances.Controls.Add(Me.Label16)
@@ -327,19 +300,38 @@ Partial Class Form1
         Me.gbxAppliances.Controls.Add(Me.Label12)
         Me.gbxAppliances.Controls.Add(Me.Label11)
         Me.gbxAppliances.Controls.Add(Me.Label10)
-        Me.gbxAppliances.Controls.Add(Me.CheckBox6)
-        Me.gbxAppliances.Controls.Add(Me.CheckBox5)
-        Me.gbxAppliances.Controls.Add(Me.CheckBox4)
-        Me.gbxAppliances.Controls.Add(Me.CheckBox3)
-        Me.gbxAppliances.Controls.Add(Me.CheckBox2)
-        Me.gbxAppliances.Controls.Add(Me.CheckBox1)
+        Me.gbxAppliances.Controls.Add(Me.cboApp6)
+        Me.gbxAppliances.Controls.Add(Me.cboApp5)
+        Me.gbxAppliances.Controls.Add(Me.cboApp4)
+        Me.gbxAppliances.Controls.Add(Me.cboApp3)
+        Me.gbxAppliances.Controls.Add(Me.cboApp2)
+        Me.gbxAppliances.Controls.Add(Me.cboApp1)
         Me.gbxAppliances.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbxAppliances.Location = New System.Drawing.Point(7, 21)
         Me.gbxAppliances.Name = "gbxAppliances"
-        Me.gbxAppliances.Size = New System.Drawing.Size(368, 180)
+        Me.gbxAppliances.Size = New System.Drawing.Size(368, 252)
         Me.gbxAppliances.TabIndex = 7
         Me.gbxAppliances.TabStop = False
         Me.gbxAppliances.Text = "Appliances"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(6, 189)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(122, 13)
+        Me.Label20.TabIndex = 13
+        Me.Label20.Text = "Installation Services"
+        '
+        'lblInstallationPrice
+        '
+        Me.lblInstallationPrice.AutoSize = True
+        Me.lblInstallationPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInstallationPrice.Location = New System.Drawing.Point(107, 210)
+        Me.lblInstallationPrice.Name = "lblInstallationPrice"
+        Me.lblInstallationPrice.Size = New System.Drawing.Size(28, 13)
+        Me.lblInstallationPrice.TabIndex = 3
+        Me.lblInstallationPrice.Text = "Ksh "
         '
         'Label18
         '
@@ -410,76 +402,76 @@ Partial Class Form1
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Price"
         '
-        'CheckBox6
+        'cboApp6
         '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox6.Location = New System.Drawing.Point(9, 152)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox6.TabIndex = 5
-        Me.CheckBox6.Text = "Dishwasher"
-        Me.CheckBox6.UseVisualStyleBackColor = True
+        Me.cboApp6.AutoSize = True
+        Me.cboApp6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboApp6.Location = New System.Drawing.Point(9, 152)
+        Me.cboApp6.Name = "cboApp6"
+        Me.cboApp6.Size = New System.Drawing.Size(81, 17)
+        Me.cboApp6.TabIndex = 5
+        Me.cboApp6.Text = "Dishwasher"
+        Me.cboApp6.UseVisualStyleBackColor = True
         '
-        'CheckBox5
+        'cboApp5
         '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox5.Location = New System.Drawing.Point(9, 129)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(89, 17)
-        Me.CheckBox5.TabIndex = 4
-        Me.CheckBox5.Text = "Double Oven"
-        Me.CheckBox5.UseVisualStyleBackColor = True
+        Me.cboApp5.AutoSize = True
+        Me.cboApp5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboApp5.Location = New System.Drawing.Point(9, 129)
+        Me.cboApp5.Name = "cboApp5"
+        Me.cboApp5.Size = New System.Drawing.Size(89, 17)
+        Me.cboApp5.TabIndex = 4
+        Me.cboApp5.Text = "Double Oven"
+        Me.cboApp5.UseVisualStyleBackColor = True
         '
-        'CheckBox4
+        'cboApp4
         '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(9, 106)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(84, 17)
-        Me.CheckBox4.TabIndex = 3
-        Me.CheckBox4.Text = "Single Oven"
-        Me.CheckBox4.UseVisualStyleBackColor = True
+        Me.cboApp4.AutoSize = True
+        Me.cboApp4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboApp4.Location = New System.Drawing.Point(9, 106)
+        Me.cboApp4.Name = "cboApp4"
+        Me.cboApp4.Size = New System.Drawing.Size(84, 17)
+        Me.cboApp4.TabIndex = 3
+        Me.cboApp4.Text = "Single Oven"
+        Me.cboApp4.UseVisualStyleBackColor = True
         '
-        'CheckBox3
+        'cboApp3
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(9, 83)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(46, 17)
-        Me.CheckBox3.TabIndex = 2
-        Me.CheckBox3.Text = "Hob"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.cboApp3.AutoSize = True
+        Me.cboApp3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboApp3.Location = New System.Drawing.Point(9, 83)
+        Me.cboApp3.Name = "cboApp3"
+        Me.cboApp3.Size = New System.Drawing.Size(46, 17)
+        Me.cboApp3.TabIndex = 2
+        Me.cboApp3.Text = "Hob"
+        Me.cboApp3.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'cboApp2
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(9, 60)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(166, 17)
-        Me.CheckBox2.TabIndex = 1
-        Me.CheckBox2.Text = "American Style Fridge Freezer"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.cboApp2.AutoSize = True
+        Me.cboApp2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboApp2.Location = New System.Drawing.Point(9, 60)
+        Me.cboApp2.Name = "cboApp2"
+        Me.cboApp2.Size = New System.Drawing.Size(166, 17)
+        Me.cboApp2.TabIndex = 1
+        Me.cboApp2.Text = "American Style Fridge Freezer"
+        Me.cboApp2.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'cboApp1
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(9, 32)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(122, 17)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "Basic Fridge Freezer"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.cboApp1.AutoSize = True
+        Me.cboApp1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboApp1.Location = New System.Drawing.Point(9, 32)
+        Me.cboApp1.Name = "cboApp1"
+        Me.cboApp1.Size = New System.Drawing.Size(122, 17)
+        Me.cboApp1.TabIndex = 0
+        Me.cboApp1.Text = "Basic Fridge Freezer"
+        Me.cboApp1.UseVisualStyleBackColor = True
         '
         'btnPurchase
         '
         Me.btnPurchase.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPurchase.Location = New System.Drawing.Point(138, 382)
+        Me.btnPurchase.Location = New System.Drawing.Point(138, 369)
         Me.btnPurchase.Name = "btnPurchase"
         Me.btnPurchase.Size = New System.Drawing.Size(75, 23)
         Me.btnPurchase.TabIndex = 6
@@ -639,11 +631,43 @@ Partial Class Form1
         Me.gbxBox.TabIndex = 7
         Me.gbxBox.TabStop = False
         '
+        'rdoInstallation
+        '
+        Me.rdoInstallation.AutoSize = True
+        Me.rdoInstallation.Location = New System.Drawing.Point(6, 208)
+        Me.rdoInstallation.Name = "rdoInstallation"
+        Me.rdoInstallation.Size = New System.Drawing.Size(95, 17)
+        Me.rdoInstallation.TabIndex = 14
+        Me.rdoInstallation.TabStop = True
+        Me.rdoInstallation.Text = "Installation :"
+        Me.rdoInstallation.UseVisualStyleBackColor = True
+        '
+        'rdoShipping
+        '
+        Me.rdoShipping.AutoSize = True
+        Me.rdoShipping.Location = New System.Drawing.Point(6, 228)
+        Me.rdoShipping.Name = "rdoShipping"
+        Me.rdoShipping.Size = New System.Drawing.Size(82, 17)
+        Me.rdoShipping.TabIndex = 15
+        Me.rdoShipping.TabStop = True
+        Me.rdoShipping.Text = "Shipping :"
+        Me.rdoShipping.UseVisualStyleBackColor = True
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(107, 227)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(40, 13)
+        Me.Label21.TabIndex = 16
+        Me.Label21.Text = "Ksh 95"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 502)
+        Me.ClientSize = New System.Drawing.Size(687, 634)
         Me.Controls.Add(Me.gbxKitchenStyles)
         Me.Controls.Add(Me.gbxCustomerDetails)
         Me.Name = "Form1"
@@ -653,10 +677,8 @@ Partial Class Form1
         Me.gbxKitchenStyles.ResumeLayout(False)
         Me.gbxKitchenStyles.PerformLayout()
         Me.gbxAppliancesOptions.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-        Me.gbxInstallation.ResumeLayout(False)
-        Me.gbxInstallation.PerformLayout()
+        Me.gbxAmount.ResumeLayout(False)
+        Me.gbxAmount.PerformLayout()
         Me.gbxAppliances.ResumeLayout(False)
         Me.gbxAppliances.PerformLayout()
         Me.gbxCountertops.ResumeLayout(False)
@@ -696,7 +718,7 @@ Partial Class Form1
     Friend WithEvents Label14 As Label
     Friend WithEvents lblRemind As Label
     Friend WithEvents gbxAppliances As GroupBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents cboApp1 As CheckBox
     Friend WithEvents Label18 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
@@ -704,15 +726,17 @@ Partial Class Form1
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents CheckBox6 As CheckBox
-    Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents gbxInstallation As GroupBox
-    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents cboApp6 As CheckBox
+    Friend WithEvents cboApp5 As CheckBox
+    Friend WithEvents cboApp4 As CheckBox
+    Friend WithEvents cboApp3 As CheckBox
+    Friend WithEvents cboApp2 As CheckBox
+    Friend WithEvents gbxAmount As GroupBox
     Friend WithEvents lblTotalCost As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents lblInstallationPrice As Label
-    Friend WithEvents cboInstallation As CheckBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents rdoShipping As RadioButton
+    Friend WithEvents rdoInstallation As RadioButton
 End Class
