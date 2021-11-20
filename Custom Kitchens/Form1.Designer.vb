@@ -23,12 +23,12 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.gbxCustomerDetails = New System.Windows.Forms.GroupBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblRange2 = New System.Windows.Forms.Label()
+        Me.lblRange3 = New System.Windows.Forms.Label()
+        Me.lblRange1 = New System.Windows.Forms.Label()
+        Me.lblBudget = New System.Windows.Forms.Label()
+        Me.lblWidth = New System.Windows.Forms.Label()
+        Me.lblLength = New System.Windows.Forms.Label()
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.lblRemarks = New System.Windows.Forms.Label()
         Me.rmBudget = New System.Windows.Forms.TextBox()
@@ -41,20 +41,20 @@ Partial Class Form1
         Me.lblShipping = New System.Windows.Forms.Label()
         Me.gbxAmount = New System.Windows.Forms.GroupBox()
         Me.lblTotalCost = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.lblTotal = New System.Windows.Forms.Label()
         Me.gbxAppliances = New System.Windows.Forms.GroupBox()
-        Me.Label21 = New System.Windows.Forms.Label()
+        Me.lblKsh10 = New System.Windows.Forms.Label()
         Me.rdoShipping = New System.Windows.Forms.RadioButton()
         Me.rdoInstallation = New System.Windows.Forms.RadioButton()
-        Me.Label20 = New System.Windows.Forms.Label()
+        Me.lblInstallation = New System.Windows.Forms.Label()
         Me.lblInstallationPrice = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lblKsh7 = New System.Windows.Forms.Label()
+        Me.lblKsh5 = New System.Windows.Forms.Label()
+        Me.lblKsh8 = New System.Windows.Forms.Label()
+        Me.lblKsh9 = New System.Windows.Forms.Label()
+        Me.lblKsh6 = New System.Windows.Forms.Label()
+        Me.lblKsh4 = New System.Windows.Forms.Label()
+        Me.lblPrice = New System.Windows.Forms.Label()
         Me.cboApp6 = New System.Windows.Forms.CheckBox()
         Me.cboApp5 = New System.Windows.Forms.CheckBox()
         Me.cboApp4 = New System.Windows.Forms.CheckBox()
@@ -62,19 +62,19 @@ Partial Class Form1
         Me.cboApp2 = New System.Windows.Forms.CheckBox()
         Me.cboApp1 = New System.Windows.Forms.CheckBox()
         Me.btnPurchase = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.lblStyles = New System.Windows.Forms.Label()
         Me.btnSelect = New System.Windows.Forms.Button()
         Me.gbxCountertops = New System.Windows.Forms.GroupBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lblKsh3 = New System.Windows.Forms.Label()
+        Me.lblKsh2 = New System.Windows.Forms.Label()
+        Me.lblKsh1 = New System.Windows.Forms.Label()
         Me.rdbGranite = New System.Windows.Forms.RadioButton()
         Me.rdbWoodBlk = New System.Windows.Forms.RadioButton()
         Me.rdbLaminate = New System.Windows.Forms.RadioButton()
         Me.lblGranitePrice = New System.Windows.Forms.Label()
         Me.lblWoodPrice = New System.Windows.Forms.Label()
         Me.lblLaminatePrice = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblPrices = New System.Windows.Forms.Label()
         Me.gbxBox = New System.Windows.Forms.GroupBox()
         Me.gbxCustomerDetails.SuspendLayout()
         Me.gbxKitchenStyles.SuspendLayout()
@@ -86,12 +86,13 @@ Partial Class Form1
         '
         'gbxCustomerDetails
         '
-        Me.gbxCustomerDetails.Controls.Add(Me.Label7)
-        Me.gbxCustomerDetails.Controls.Add(Me.Label3)
-        Me.gbxCustomerDetails.Controls.Add(Me.Label2)
-        Me.gbxCustomerDetails.Controls.Add(Me.Label6)
-        Me.gbxCustomerDetails.Controls.Add(Me.Label4)
-        Me.gbxCustomerDetails.Controls.Add(Me.Label1)
+        Me.gbxCustomerDetails.Controls.Add(Me.gbxKitchenStyles)
+        Me.gbxCustomerDetails.Controls.Add(Me.lblRange2)
+        Me.gbxCustomerDetails.Controls.Add(Me.lblRange3)
+        Me.gbxCustomerDetails.Controls.Add(Me.lblRange1)
+        Me.gbxCustomerDetails.Controls.Add(Me.lblBudget)
+        Me.gbxCustomerDetails.Controls.Add(Me.lblWidth)
+        Me.gbxCustomerDetails.Controls.Add(Me.lblLength)
         Me.gbxCustomerDetails.Controls.Add(Me.btnEnter)
         Me.gbxCustomerDetails.Controls.Add(Me.lblRemarks)
         Me.gbxCustomerDetails.Controls.Add(Me.rmBudget)
@@ -106,68 +107,68 @@ Partial Class Form1
         Me.gbxCustomerDetails.TabStop = False
         Me.gbxCustomerDetails.Text = "Customer Details"
         '
-        'Label7
+        'lblRange2
         '
-        Me.Label7.AutoEllipsis = True
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(161, 128)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(67, 15)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "(120 - 600)"
+        Me.lblRange2.AutoEllipsis = True
+        Me.lblRange2.AutoSize = True
+        Me.lblRange2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRange2.Location = New System.Drawing.Point(161, 128)
+        Me.lblRange2.Name = "lblRange2"
+        Me.lblRange2.Size = New System.Drawing.Size(67, 15)
+        Me.lblRange2.TabIndex = 15
+        Me.lblRange2.Text = "(120 - 600)"
         '
-        'Label3
+        'lblRange3
         '
-        Me.Label3.AutoEllipsis = True
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(152, 186)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 15)
-        Me.Label3.TabIndex = 14
-        Me.Label3.Text = "(1000 - 25000)"
+        Me.lblRange3.AutoEllipsis = True
+        Me.lblRange3.AutoSize = True
+        Me.lblRange3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRange3.Location = New System.Drawing.Point(152, 186)
+        Me.lblRange3.Name = "lblRange3"
+        Me.lblRange3.Size = New System.Drawing.Size(88, 15)
+        Me.lblRange3.TabIndex = 14
+        Me.lblRange3.Text = "(1000 - 25000)"
         '
-        'Label2
+        'lblRange1
         '
-        Me.Label2.AutoEllipsis = True
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(161, 73)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 15)
-        Me.Label2.TabIndex = 13
-        Me.Label2.Text = "(150 - 600)"
+        Me.lblRange1.AutoEllipsis = True
+        Me.lblRange1.AutoSize = True
+        Me.lblRange1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRange1.Location = New System.Drawing.Point(161, 73)
+        Me.lblRange1.Name = "lblRange1"
+        Me.lblRange1.Size = New System.Drawing.Size(67, 15)
+        Me.lblRange1.TabIndex = 13
+        Me.lblRange1.Text = "(150 - 600)"
         '
-        'Label6
+        'lblBudget
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(35, 167)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 14)
-        Me.Label6.TabIndex = 12
-        Me.Label6.Text = "Budget :"
+        Me.lblBudget.AutoSize = True
+        Me.lblBudget.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBudget.Location = New System.Drawing.Point(35, 167)
+        Me.lblBudget.Name = "lblBudget"
+        Me.lblBudget.Size = New System.Drawing.Size(51, 14)
+        Me.lblBudget.TabIndex = 12
+        Me.lblBudget.Text = "Budget :"
         '
-        'Label4
+        'lblWidth
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(35, 109)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(48, 14)
-        Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Width  :"
+        Me.lblWidth.AutoSize = True
+        Me.lblWidth.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWidth.Location = New System.Drawing.Point(35, 109)
+        Me.lblWidth.Name = "lblWidth"
+        Me.lblWidth.Size = New System.Drawing.Size(48, 14)
+        Me.lblWidth.TabIndex = 11
+        Me.lblWidth.Text = "Width  :"
         '
-        'Label1
+        'lblLength
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(35, 54)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 14)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Length :"
+        Me.lblLength.AutoSize = True
+        Me.lblLength.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLength.Location = New System.Drawing.Point(35, 54)
+        Me.lblLength.Name = "lblLength"
+        Me.lblLength.Size = New System.Drawing.Size(50, 14)
+        Me.lblLength.TabIndex = 10
+        Me.lblLength.Text = "Length :"
         '
         'btnEnter
         '
@@ -219,14 +220,14 @@ Partial Class Form1
         '
         'gbxKitchenStyles
         '
-        Me.gbxKitchenStyles.Controls.Add(Me.lblRemind)
         Me.gbxKitchenStyles.Controls.Add(Me.gbxAppliancesOptions)
-        Me.gbxKitchenStyles.Controls.Add(Me.Label13)
+        Me.gbxKitchenStyles.Controls.Add(Me.lblRemind)
+        Me.gbxKitchenStyles.Controls.Add(Me.lblStyles)
         Me.gbxKitchenStyles.Controls.Add(Me.btnSelect)
         Me.gbxKitchenStyles.Controls.Add(Me.gbxCountertops)
         Me.gbxKitchenStyles.Controls.Add(Me.gbxBox)
         Me.gbxKitchenStyles.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbxKitchenStyles.Location = New System.Drawing.Point(96, 27)
+        Me.gbxKitchenStyles.Location = New System.Drawing.Point(0, 4)
         Me.gbxKitchenStyles.Name = "gbxKitchenStyles"
         Me.gbxKitchenStyles.Size = New System.Drawing.Size(400, 450)
         Me.gbxKitchenStyles.TabIndex = 8
@@ -280,7 +281,7 @@ Partial Class Form1
         'gbxAmount
         '
         Me.gbxAmount.Controls.Add(Me.lblTotalCost)
-        Me.gbxAmount.Controls.Add(Me.Label19)
+        Me.gbxAmount.Controls.Add(Me.lblTotal)
         Me.gbxAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbxAmount.Location = New System.Drawing.Point(7, 279)
         Me.gbxAmount.Name = "gbxAmount"
@@ -299,30 +300,30 @@ Partial Class Form1
         Me.lblTotalCost.TabIndex = 1
         Me.lblTotalCost.Text = "Ksh "
         '
-        'Label19
+        'lblTotal
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(6, 32)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(77, 13)
-        Me.Label19.TabIndex = 0
-        Me.Label19.Text = "Total Cost : "
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.Location = New System.Drawing.Point(6, 32)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(77, 13)
+        Me.lblTotal.TabIndex = 0
+        Me.lblTotal.Text = "Total Cost : "
         '
         'gbxAppliances
         '
-        Me.gbxAppliances.Controls.Add(Me.Label21)
+        Me.gbxAppliances.Controls.Add(Me.lblKsh10)
         Me.gbxAppliances.Controls.Add(Me.rdoShipping)
         Me.gbxAppliances.Controls.Add(Me.rdoInstallation)
-        Me.gbxAppliances.Controls.Add(Me.Label20)
+        Me.gbxAppliances.Controls.Add(Me.lblInstallation)
         Me.gbxAppliances.Controls.Add(Me.lblInstallationPrice)
-        Me.gbxAppliances.Controls.Add(Me.Label18)
-        Me.gbxAppliances.Controls.Add(Me.Label17)
-        Me.gbxAppliances.Controls.Add(Me.Label16)
-        Me.gbxAppliances.Controls.Add(Me.Label15)
-        Me.gbxAppliances.Controls.Add(Me.Label12)
-        Me.gbxAppliances.Controls.Add(Me.Label11)
-        Me.gbxAppliances.Controls.Add(Me.Label10)
+        Me.gbxAppliances.Controls.Add(Me.lblKsh7)
+        Me.gbxAppliances.Controls.Add(Me.lblKsh5)
+        Me.gbxAppliances.Controls.Add(Me.lblKsh8)
+        Me.gbxAppliances.Controls.Add(Me.lblKsh9)
+        Me.gbxAppliances.Controls.Add(Me.lblKsh6)
+        Me.gbxAppliances.Controls.Add(Me.lblKsh4)
+        Me.gbxAppliances.Controls.Add(Me.lblPrice)
         Me.gbxAppliances.Controls.Add(Me.cboApp6)
         Me.gbxAppliances.Controls.Add(Me.cboApp5)
         Me.gbxAppliances.Controls.Add(Me.cboApp4)
@@ -337,15 +338,15 @@ Partial Class Form1
         Me.gbxAppliances.TabStop = False
         Me.gbxAppliances.Text = "Appliances"
         '
-        'Label21
+        'lblKsh10
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(107, 227)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(40, 13)
-        Me.Label21.TabIndex = 16
-        Me.Label21.Text = "Ksh 95"
+        Me.lblKsh10.AutoSize = True
+        Me.lblKsh10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKsh10.Location = New System.Drawing.Point(107, 227)
+        Me.lblKsh10.Name = "lblKsh10"
+        Me.lblKsh10.Size = New System.Drawing.Size(40, 13)
+        Me.lblKsh10.TabIndex = 16
+        Me.lblKsh10.Text = "Ksh 95"
         '
         'rdoShipping
         '
@@ -369,14 +370,14 @@ Partial Class Form1
         Me.rdoInstallation.Text = "Installation :"
         Me.rdoInstallation.UseVisualStyleBackColor = True
         '
-        'Label20
+        'lblInstallation
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(6, 189)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(122, 13)
-        Me.Label20.TabIndex = 13
-        Me.Label20.Text = "Installation Services"
+        Me.lblInstallation.AutoSize = True
+        Me.lblInstallation.Location = New System.Drawing.Point(6, 189)
+        Me.lblInstallation.Name = "lblInstallation"
+        Me.lblInstallation.Size = New System.Drawing.Size(122, 13)
+        Me.lblInstallation.TabIndex = 13
+        Me.lblInstallation.Text = "Installation Services"
         '
         'lblInstallationPrice
         '
@@ -388,74 +389,74 @@ Partial Class Form1
         Me.lblInstallationPrice.TabIndex = 3
         Me.lblInstallationPrice.Text = "Ksh "
         '
-        'Label18
+        'lblKsh7
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(218, 107)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(46, 13)
-        Me.Label18.TabIndex = 12
-        Me.Label18.Text = "Ksh 340"
+        Me.lblKsh7.AutoSize = True
+        Me.lblKsh7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKsh7.Location = New System.Drawing.Point(218, 107)
+        Me.lblKsh7.Name = "lblKsh7"
+        Me.lblKsh7.Size = New System.Drawing.Size(46, 13)
+        Me.lblKsh7.TabIndex = 12
+        Me.lblKsh7.Text = "Ksh 340"
         '
-        'Label17
+        'lblKsh5
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(218, 61)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(46, 13)
-        Me.Label17.TabIndex = 11
-        Me.Label17.Text = "Ksh 750"
+        Me.lblKsh5.AutoSize = True
+        Me.lblKsh5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKsh5.Location = New System.Drawing.Point(218, 61)
+        Me.lblKsh5.Name = "lblKsh5"
+        Me.lblKsh5.Size = New System.Drawing.Size(46, 13)
+        Me.lblKsh5.TabIndex = 11
+        Me.lblKsh5.Text = "Ksh 750"
         '
-        'Label16
+        'lblKsh8
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(218, 130)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(46, 13)
-        Me.Label16.TabIndex = 10
-        Me.Label16.Text = "Ksh 550"
+        Me.lblKsh8.AutoSize = True
+        Me.lblKsh8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKsh8.Location = New System.Drawing.Point(218, 130)
+        Me.lblKsh8.Name = "lblKsh8"
+        Me.lblKsh8.Size = New System.Drawing.Size(46, 13)
+        Me.lblKsh8.TabIndex = 10
+        Me.lblKsh8.Text = "Ksh 550"
         '
-        'Label15
+        'lblKsh9
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(218, 153)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(46, 13)
-        Me.Label15.TabIndex = 9
-        Me.Label15.Text = "Ksh 270"
+        Me.lblKsh9.AutoSize = True
+        Me.lblKsh9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKsh9.Location = New System.Drawing.Point(218, 153)
+        Me.lblKsh9.Name = "lblKsh9"
+        Me.lblKsh9.Size = New System.Drawing.Size(46, 13)
+        Me.lblKsh9.TabIndex = 9
+        Me.lblKsh9.Text = "Ksh 270"
         '
-        'Label12
+        'lblKsh6
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(218, 84)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(46, 13)
-        Me.Label12.TabIndex = 8
-        Me.Label12.Text = "Ksh 400"
+        Me.lblKsh6.AutoSize = True
+        Me.lblKsh6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKsh6.Location = New System.Drawing.Point(218, 84)
+        Me.lblKsh6.Name = "lblKsh6"
+        Me.lblKsh6.Size = New System.Drawing.Size(46, 13)
+        Me.lblKsh6.TabIndex = 8
+        Me.lblKsh6.Text = "Ksh 400"
         '
-        'Label11
+        'lblKsh4
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(218, 39)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(46, 13)
-        Me.Label11.TabIndex = 7
-        Me.Label11.Text = "Ksh 180"
+        Me.lblKsh4.AutoSize = True
+        Me.lblKsh4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKsh4.Location = New System.Drawing.Point(218, 39)
+        Me.lblKsh4.Name = "lblKsh4"
+        Me.lblKsh4.Size = New System.Drawing.Size(46, 13)
+        Me.lblKsh4.TabIndex = 7
+        Me.lblKsh4.Text = "Ksh 180"
         '
-        'Label10
+        'lblPrice
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(220, 16)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(36, 13)
-        Me.Label10.TabIndex = 6
-        Me.Label10.Text = "Price"
+        Me.lblPrice.AutoSize = True
+        Me.lblPrice.Location = New System.Drawing.Point(220, 16)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(36, 13)
+        Me.lblPrice.TabIndex = 6
+        Me.lblPrice.Text = "Price"
         '
         'cboApp6
         '
@@ -533,15 +534,15 @@ Partial Class Form1
         Me.btnPurchase.Text = "Purchase"
         Me.btnPurchase.UseVisualStyleBackColor = True
         '
-        'Label13
+        'lblStyles
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(40, 17)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(45, 15)
-        Me.Label13.TabIndex = 0
-        Me.Label13.Text = "Styles"
+        Me.lblStyles.AutoSize = True
+        Me.lblStyles.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStyles.Location = New System.Drawing.Point(40, 17)
+        Me.lblStyles.Name = "lblStyles"
+        Me.lblStyles.Size = New System.Drawing.Size(45, 15)
+        Me.lblStyles.TabIndex = 0
+        Me.lblStyles.Text = "Styles"
         '
         'btnSelect
         '
@@ -555,16 +556,16 @@ Partial Class Form1
         '
         'gbxCountertops
         '
-        Me.gbxCountertops.Controls.Add(Me.Label8)
-        Me.gbxCountertops.Controls.Add(Me.Label9)
-        Me.gbxCountertops.Controls.Add(Me.Label14)
+        Me.gbxCountertops.Controls.Add(Me.lblKsh3)
+        Me.gbxCountertops.Controls.Add(Me.lblKsh2)
+        Me.gbxCountertops.Controls.Add(Me.lblKsh1)
         Me.gbxCountertops.Controls.Add(Me.rdbGranite)
         Me.gbxCountertops.Controls.Add(Me.rdbWoodBlk)
         Me.gbxCountertops.Controls.Add(Me.rdbLaminate)
         Me.gbxCountertops.Controls.Add(Me.lblGranitePrice)
         Me.gbxCountertops.Controls.Add(Me.lblWoodPrice)
         Me.gbxCountertops.Controls.Add(Me.lblLaminatePrice)
-        Me.gbxCountertops.Controls.Add(Me.Label5)
+        Me.gbxCountertops.Controls.Add(Me.lblPrices)
         Me.gbxCountertops.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbxCountertops.Location = New System.Drawing.Point(38, 226)
         Me.gbxCountertops.Name = "gbxCountertops"
@@ -574,35 +575,35 @@ Partial Class Form1
         Me.gbxCountertops.Text = "CounterTops"
         Me.gbxCountertops.Visible = False
         '
-        'Label8
+        'lblKsh3
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(130, 105)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(25, 13)
-        Me.Label8.TabIndex = 12
-        Me.Label8.Text = "Ksh"
+        Me.lblKsh3.AutoSize = True
+        Me.lblKsh3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKsh3.Location = New System.Drawing.Point(130, 105)
+        Me.lblKsh3.Name = "lblKsh3"
+        Me.lblKsh3.Size = New System.Drawing.Size(25, 13)
+        Me.lblKsh3.TabIndex = 12
+        Me.lblKsh3.Text = "Ksh"
         '
-        'Label9
+        'lblKsh2
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(128, 80)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(28, 13)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "Ksh "
+        Me.lblKsh2.AutoSize = True
+        Me.lblKsh2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKsh2.Location = New System.Drawing.Point(128, 80)
+        Me.lblKsh2.Name = "lblKsh2"
+        Me.lblKsh2.Size = New System.Drawing.Size(28, 13)
+        Me.lblKsh2.TabIndex = 11
+        Me.lblKsh2.Text = "Ksh "
         '
-        'Label14
+        'lblKsh1
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(128, 50)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(28, 13)
-        Me.Label14.TabIndex = 10
-        Me.Label14.Text = "Ksh "
+        Me.lblKsh1.AutoSize = True
+        Me.lblKsh1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblKsh1.Location = New System.Drawing.Point(128, 50)
+        Me.lblKsh1.Name = "lblKsh1"
+        Me.lblKsh1.Size = New System.Drawing.Size(28, 13)
+        Me.lblKsh1.TabIndex = 10
+        Me.lblKsh1.Text = "Ksh "
         '
         'rdbGranite
         '
@@ -667,15 +668,15 @@ Partial Class Form1
         Me.lblLaminatePrice.Size = New System.Drawing.Size(0, 13)
         Me.lblLaminatePrice.TabIndex = 4
         '
-        'Label5
+        'lblPrices
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(162, 18)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(41, 15)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Prices"
+        Me.lblPrices.AutoSize = True
+        Me.lblPrices.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrices.Location = New System.Drawing.Point(162, 18)
+        Me.lblPrices.Name = "lblPrices"
+        Me.lblPrices.Size = New System.Drawing.Size(41, 15)
+        Me.lblPrices.TabIndex = 1
+        Me.lblPrices.Text = "Prices"
         '
         'gbxBox
         '
@@ -690,8 +691,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(687, 634)
-        Me.Controls.Add(Me.gbxKitchenStyles)
+        Me.ClientSize = New System.Drawing.Size(896, 634)
         Me.Controls.Add(Me.gbxCustomerDetails)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -721,35 +721,35 @@ Partial Class Form1
     Friend WithEvents gbxAppliancesOptions As GroupBox
     Friend WithEvents gbxCountertops As GroupBox
     Friend WithEvents btnPurchase As Button
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblPrices As Label
     Friend WithEvents lblGranitePrice As Label
     Friend WithEvents lblWoodPrice As Label
     Friend WithEvents lblLaminatePrice As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblBudget As Label
+    Friend WithEvents lblWidth As Label
+    Friend WithEvents lblLength As Label
     Friend WithEvents btnEnter As Button
     Friend WithEvents btnSelect As Button
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label13 As Label
+    Friend WithEvents lblRange2 As Label
+    Friend WithEvents lblRange3 As Label
+    Friend WithEvents lblRange1 As Label
+    Friend WithEvents lblStyles As Label
     Friend WithEvents rdbGranite As RadioButton
     Friend WithEvents rdbWoodBlk As RadioButton
     Friend WithEvents rdbLaminate As RadioButton
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label14 As Label
+    Friend WithEvents lblKsh3 As Label
+    Friend WithEvents lblKsh2 As Label
+    Friend WithEvents lblKsh1 As Label
     Friend WithEvents lblRemind As Label
     Friend WithEvents gbxAppliances As GroupBox
     Friend WithEvents cboApp1 As CheckBox
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
+    Friend WithEvents lblKsh7 As Label
+    Friend WithEvents lblKsh5 As Label
+    Friend WithEvents lblKsh8 As Label
+    Friend WithEvents lblKsh9 As Label
+    Friend WithEvents lblKsh6 As Label
+    Friend WithEvents lblKsh4 As Label
+    Friend WithEvents lblPrice As Label
     Friend WithEvents cboApp6 As CheckBox
     Friend WithEvents cboApp5 As CheckBox
     Friend WithEvents cboApp4 As CheckBox
@@ -757,10 +757,10 @@ Partial Class Form1
     Friend WithEvents cboApp2 As CheckBox
     Friend WithEvents gbxAmount As GroupBox
     Friend WithEvents lblTotalCost As Label
-    Friend WithEvents Label19 As Label
+    Friend WithEvents lblTotal As Label
     Friend WithEvents lblInstallationPrice As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
+    Friend WithEvents lblInstallation As Label
+    Friend WithEvents lblKsh10 As Label
     Friend WithEvents rdoShipping As RadioButton
     Friend WithEvents rdoInstallation As RadioButton
     Friend WithEvents lblShipping As Label
