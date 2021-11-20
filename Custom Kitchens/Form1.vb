@@ -1,4 +1,5 @@
 ﻿Public Class Form1
+    'creating all arrays and variables for holding data
     Dim kitchenStyle() As String = {"Small L-shaped Kitchen", "Medium L-shaped Kitchen", "Large L-shaped Kitchen", "Small Straight Kitchen", "Medium Straight Kitchen", "Large Straight Kitchen", "Large Island Kitchen"}
     Dim prices() As Integer = {3500, 4500, 5750, 6500, 7750, 9500, 8250, 9500, 12500, 1000, 1500, 2200, 5250, 6200, 8000, 6750, 8500, 11000, 12500, 15000, 23000}
     Dim appliances() As String = {"Basic Fridge Freezer", "American Style Fridge Freezer", "Hob", "Single Oven", "Double Oven", "Dishwasher"}
@@ -8,6 +9,68 @@
     Dim Counterpricelist(3) As Integer
     Dim chosenStyle As String
     Dim total, totalCost As Double
+    'creating a function to validate date and ensure it is within bounds given
+    Function validateData(ByVal lnth As Integer, ByVal width As Integer, ByVal budget As Integer) As Boolean
+        'This function validates data with an if statement and returns true for incorrect input and false for correct input
+        If (lnth < 150 Or width < 20 Or budget < 1000) Or (lnth > 600 Or width > 600 Or budget > 25000) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Function verify() As String
+        'this function verifies input by ensuring no characters except numbers can be accepted
+        'create a msg variable to hold return type message
+        Dim length, width, budget As Integer
+        Dim msg As String
+        'initialize with an empty text as default
+        msg = " "
+        'catch and raise exceptions with a try statement
+        Try
+            length = rmLength.Text
+            width = rmWidth.Text
+            budget = rmBudget.Text
+            'throw an exception when validateData() function returns as True
+            If (validateData(length, width, budget)) Then
+                Throw New Exception("Enter values within applicable ranges")
+            End If
+
+        Catch ex As InvalidCastException
+            'this code catches all conversion error exceptions that could break the code
+            msg = "Enter all values correctly"
+            Return msg
+        Catch ez As Exception
+            'this one catches all other exceptions including our own
+            msg = ez.Message
+            Return msg
+
+        End Try
+        'return the final message
+        'an empty string means a correct validation has occured
+        Return msg
+    End Function
+    'creating a function that gets kitchen styles relating to dimensions given and budget
+    Function getKitchenByDIm(ByVal length As Integer, ByVal width As Integer, ByVal budget As Integer, ByVal prices() As Integer, ByVal kitchenstyle() As String,
+                             ByVal lengthArr() As Integer, ByVal widthArr() As Integer) As String()
+        'create an array for storing the styles within customer's range
+        Dim chosenStyles(7) As String
+        'create a variable for holding the least amount payable for a kitchen style 
+        Dim lowest() As Integer = {prices(0), prices(3), prices(6), prices(9), prices(12), prices(15), prices(18)}
+        Dim cnt As Integer = 0
+        Dim cntprice As Integer = 0
+
+        For counter = 0 To 6
+            If (length > lengthArr(counter) And width > widthArr(counter)) And budget > lowest(counter) Then
+
+                chosenStyles(cnt) = kitchenstyle(counter)
+                cnt += 1
+
+            End If
+        Next
+        Return chosenStyles
+
+    End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
 
@@ -53,87 +116,7 @@
         End If
     End Sub
 
-
-
-    Function getKitchenByDIm(ByVal length As Integer, ByVal width As Integer, ByVal budget As Integer, ByVal prices() As Integer, ByVal kitchenstyle() As String,
-                             ByVal lengthArr() As Integer, ByVal widthArr() As Integer) As String()
-        Dim chosenStyles(7) As String
-        Dim lowest() As Integer = {prices(0), prices(3), prices(6), prices(9), prices(12), prices(15), prices(18)}
-        Dim cnt As Integer = 0
-        Dim cntprice As Integer = 0
-
-        For counter = 0 To 6
-            If (length > lengthArr(counter) And width > widthArr(counter)) And budget > lowest(counter) Then
-
-                chosenStyles(cnt) = kitchenstyle(counter)
-                cnt += 1
-
-            End If
-        Next
-        Return chosenStyles
-
-    End Function
-    Function verify() As String
-        'this function verifies input by ensuring no characters except numbers can be accepted
-        'create a msg variable to hold return type message
-        Dim length, width, budget As Integer
-        Dim msg As String
-        'initialize with an empty text as default
-        msg = " "
-        'catch and raise exceptions with a try statement
-        Try
-            length = rmLength.Text
-            width = rmWidth.Text
-            budget = rmBudget.Text
-            'throw an exception when validateData() function returns as True
-            If (validateData(length, width, budget)) Then
-                Throw New Exception("Enter values within applicable ranges")
-            End If
-
-        Catch ex As InvalidCastException
-            'this code catches all conversion error exceptions that could break the code
-            msg = "Enter all values correctly"
-            Return msg
-        Catch ez As Exception
-            'this one catches all other exceptions including our own
-            msg = ez.Message
-            Return msg
-
-        End Try
-        'return the final message
-        'an empty string means a correct validation has occured
-        Return msg
-    End Function
-
-    Function validateData(ByVal lnth As Integer, ByVal width As Integer, ByVal budget As Integer) As Boolean
-        'This function validates data with an if statement and returns true for incorrect input and false for correct input
-        If (lnth < 150 Or width < 20 Or budget < 1000) Or (lnth > 600 Or width > 600 Or budget > 25000) Then
-            Return True
-        Else
-            Return False
-        End If
-    End Function
-
-
-    Private Sub loadCounters(sender As Object, e As EventArgs) Handles gbxBox.MouseMove
-
-        Dim rdb As New RadioButton()
-
-
-        For Each rdb In gbxBox.Controls
-            If rdb.Checked Then
-                gbxCountertops.Visible = True
-                Dim priceofcountertops() As Integer = getKitchenPrices(prices, rdb.Text, kitchenStyle)
-                Counterpricelist = priceofcountertops
-                lblLaminatePrice.Text = priceofcountertops(0)
-                lblWoodPrice.Text = priceofcountertops(1)
-                lblGranitePrice.Text = priceofcountertops(2)
-
-            End If
-        Next
-
-    End Sub
-
+    'creating a function to get Kitchen countertop prices using the name of the chosen style
     Function getKitchenPrices(ByVal prices() As Integer, ByVal text As String, ByVal styles() As String) As Integer()
 
         Dim n, pricelist(3) As Integer
@@ -181,7 +164,55 @@
 
     End Function
 
-    Private Sub btnProceed_Click(sender As Object, e As EventArgs) Handles btnProceed.Click
+    'creating a sub to load countertops as radio buttons when user moves cursor over the groupbox containing styles after selection
+    Private Sub loadCounters(sender As Object, e As EventArgs) Handles gbxBox.MouseMove
+
+        Dim rdb As New RadioButton()
+
+        'dynamic creation of radio buttons at runtime
+
+        For Each rdb In gbxBox.Controls
+            If rdb.Checked Then
+                gbxCountertops.Visible = True
+                'add prices for countertops using getKitchenPrices () function
+                Dim priceofcountertops() As Integer = getKitchenPrices(prices, rdb.Text, kitchenStyle)
+                Counterpricelist = priceofcountertops
+                lblLaminatePrice.Text = priceofcountertops(0)
+                lblWoodPrice.Text = priceofcountertops(1)
+                lblGranitePrice.Text = priceofcountertops(2)
+
+            End If
+        Next
+
+    End Sub
+
+    'creating a function to get the installation costs of the kitchen Style
+    Function getInstallationCost() As Integer
+        For counter = 0 To 6
+            If chosenStyle.Equals(kitchenStyle(counter)) Then
+                installationPrice = installationCosts(counter)
+            End If
+        Next
+        Return installationPrice
+    End Function
+
+    Function getItemCost(ByVal itemname As String) As Integer
+        Dim itemCost As Integer
+
+        For counter = 0 To 5
+            If itemname.Equals(appliances(counter)) Then
+                itemCost = appliancePrices(counter)
+            End If
+        Next
+        Return itemCost
+    End Function
+
+
+    '''when select kitchen button is pressed the following sub handles the event
+    '''the program checks if any of the given countertops is selected 
+    '''and records the price of the selected item
+    '''the routine also handles no input with an error message
+    Private Sub btnProceed_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
         Dim counterTopPrice As Integer = 0
         lblRemind.Text = ""
 
@@ -226,32 +257,12 @@
 
     End Sub
 
-    Function getInstallationCost() As Integer
-        For counter = 0 To 6
-            If chosenStyle.Equals(kitchenStyle(counter)) Then
-                installationPrice = installationCosts(counter)
-            End If
-        Next
-        Return installationPrice
-    End Function
-
-    Function getItemCost(ByVal itemname As String) As Integer
-        Dim itemCost As Integer
-
-        For counter = 0 To 5
-            If itemname.Equals(appliances(counter)) Then
-                itemCost = appliancePrices(counter)
-            End If
-        Next
-        Return itemCost
-    End Function
-
-
-    Private Sub btnProceed1_Click(sender As Object, e As EventArgs) Handles btnProceed1.Click
-        Me.Hide()
-        Form2.Show()
-    End Sub
-
+    ''' <summary>
+    ''' this sub refreshes the price whenever the Purchase button is pressed
+    ''' it adds the prices of all selected appliances 
+    ''' it also ensures the user selects an option between shipping and installation
+    ''' it handles this with an error message
+    ''' </summary>
     Private Sub refreshPrice() Handles btnPurchase.Click
         Dim cost As Integer = 0
         lblShipping.Text = ""
@@ -299,5 +310,15 @@
         lblTotalCost.Text = $"{totalCost}"
 
     End Sub
+    ''' <summary>
+    ''' te last sub that runs when proceed button is clicked
+    ''' it hides the current form and takes the user to another form
+    ''' </summary>
+    Private Sub btnProceed1_Click(sender As Object, e As EventArgs) Handles btnProceed1.Click
+        Me.Hide()
+        Form2.Show()
+    End Sub
+
+
 
 End Class

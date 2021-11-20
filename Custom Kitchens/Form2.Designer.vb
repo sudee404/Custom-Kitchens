@@ -28,8 +28,8 @@ Partial Class Form2
         Me.Label4 = New System.Windows.Forms.Label()
         Me.gboEnterDetails = New System.Windows.Forms.GroupBox()
         Me.txbLName = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.tbxaddress = New System.Windows.Forms.TextBox()
+        Me.tbxEmail = New System.Windows.Forms.TextBox()
         Me.txbFName = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -38,22 +38,23 @@ Partial Class Form2
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cboCreditCard = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txbCreditNumber = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.tbxHouseNumber = New System.Windows.Forms.TextBox()
+        Me.tbxTown = New System.Windows.Forms.TextBox()
+        Me.tbxStreet = New System.Windows.Forms.TextBox()
+        Me.tbxPostal = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.tbxMonth = New System.Windows.Forms.TextBox()
+        Me.tbxYear = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblError = New System.Windows.Forms.Label()
         Me.gboEnterDetails.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -99,8 +100,8 @@ Partial Class Form2
         'gboEnterDetails
         '
         Me.gboEnterDetails.Controls.Add(Me.txbLName)
-        Me.gboEnterDetails.Controls.Add(Me.TextBox4)
-        Me.gboEnterDetails.Controls.Add(Me.TextBox3)
+        Me.gboEnterDetails.Controls.Add(Me.tbxaddress)
+        Me.gboEnterDetails.Controls.Add(Me.tbxEmail)
         Me.gboEnterDetails.Controls.Add(Me.txbFName)
         Me.gboEnterDetails.Controls.Add(Me.Label2)
         Me.gboEnterDetails.Controls.Add(Me.Label12)
@@ -122,19 +123,19 @@ Partial Class Form2
         Me.txbLName.Size = New System.Drawing.Size(215, 21)
         Me.txbLName.TabIndex = 4
         '
-        'TextBox4
+        'tbxaddress
         '
-        Me.TextBox4.Location = New System.Drawing.Point(325, 122)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(215, 21)
-        Me.TextBox4.TabIndex = 4
+        Me.tbxaddress.Location = New System.Drawing.Point(325, 122)
+        Me.tbxaddress.Name = "tbxaddress"
+        Me.tbxaddress.Size = New System.Drawing.Size(215, 21)
+        Me.tbxaddress.TabIndex = 4
         '
-        'TextBox3
+        'tbxEmail
         '
-        Me.TextBox3.Location = New System.Drawing.Point(15, 122)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(215, 21)
-        Me.TextBox3.TabIndex = 4
+        Me.tbxEmail.Location = New System.Drawing.Point(15, 122)
+        Me.tbxEmail.Name = "tbxEmail"
+        Me.tbxEmail.Size = New System.Drawing.Size(215, 21)
+        Me.tbxEmail.TabIndex = 4
         '
         'txbFName
         '
@@ -142,6 +143,7 @@ Partial Class Form2
         Me.txbFName.Name = "txbFName"
         Me.txbFName.Size = New System.Drawing.Size(215, 21)
         Me.txbFName.TabIndex = 4
+        Me.txbFName.UseWaitCursor = True
         '
         'Label12
         '
@@ -206,14 +208,14 @@ Partial Class Form2
         Me.Label10.TabIndex = 2
         Me.Label10.Text = "Credit Card Type*"
         '
-        'ComboBox2
+        'cboCreditCard
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"VISA", "AMERICAN EXPRESS", "MASTERCARD"})
-        Me.ComboBox2.Location = New System.Drawing.Point(15, 53)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(215, 23)
-        Me.ComboBox2.TabIndex = 6
+        Me.cboCreditCard.FormattingEnabled = True
+        Me.cboCreditCard.Items.AddRange(New Object() {"VISA", "AMERICAN EXPRESS", "MASTERCARD"})
+        Me.cboCreditCard.Location = New System.Drawing.Point(15, 53)
+        Me.cboCreditCard.Name = "cboCreditCard"
+        Me.cboCreditCard.Size = New System.Drawing.Size(215, 23)
+        Me.cboCreditCard.TabIndex = 6
         '
         'Label11
         '
@@ -224,21 +226,21 @@ Partial Class Form2
         Me.Label11.TabIndex = 2
         Me.Label11.Text = "Expiration date*"
         '
-        'TextBox5
+        'txbCreditNumber
         '
-        Me.TextBox5.Location = New System.Drawing.Point(15, 112)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(215, 21)
-        Me.TextBox5.TabIndex = 4
+        Me.txbCreditNumber.Location = New System.Drawing.Point(15, 112)
+        Me.txbCreditNumber.Name = "txbCreditNumber"
+        Me.txbCreditNumber.Size = New System.Drawing.Size(215, 21)
+        Me.txbCreditNumber.TabIndex = 4
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.TextBox9)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.tbxHouseNumber)
+        Me.GroupBox1.Controls.Add(Me.tbxTown)
+        Me.GroupBox1.Controls.Add(Me.tbxStreet)
+        Me.GroupBox1.Controls.Add(Me.tbxPostal)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -249,40 +251,40 @@ Partial Class Form2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Billing Address"
         '
-        'TextBox9
+        'tbxHouseNumber
         '
-        Me.TextBox9.Location = New System.Drawing.Point(324, 95)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(99, 21)
-        Me.TextBox9.TabIndex = 4
+        Me.tbxHouseNumber.Location = New System.Drawing.Point(324, 95)
+        Me.tbxHouseNumber.Name = "tbxHouseNumber"
+        Me.tbxHouseNumber.Size = New System.Drawing.Size(99, 21)
+        Me.tbxHouseNumber.TabIndex = 4
         '
-        'TextBox7
+        'tbxTown
         '
-        Me.TextBox7.Location = New System.Drawing.Point(14, 95)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(215, 21)
-        Me.TextBox7.TabIndex = 4
+        Me.tbxTown.Location = New System.Drawing.Point(14, 95)
+        Me.tbxTown.Name = "tbxTown"
+        Me.tbxTown.Size = New System.Drawing.Size(215, 21)
+        Me.tbxTown.TabIndex = 4
         '
-        'TextBox8
+        'tbxStreet
         '
-        Me.TextBox8.Location = New System.Drawing.Point(14, 52)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(215, 21)
-        Me.TextBox8.TabIndex = 4
+        Me.tbxStreet.Location = New System.Drawing.Point(14, 52)
+        Me.tbxStreet.Name = "tbxStreet"
+        Me.tbxStreet.Size = New System.Drawing.Size(215, 21)
+        Me.tbxStreet.TabIndex = 4
         '
-        'TextBox6
+        'tbxPostal
         '
-        Me.TextBox6.Location = New System.Drawing.Point(324, 52)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(99, 21)
-        Me.TextBox6.TabIndex = 4
+        Me.tbxPostal.Location = New System.Drawing.Point(324, 52)
+        Me.tbxPostal.Name = "tbxPostal"
+        Me.tbxPostal.Size = New System.Drawing.Size(99, 21)
+        Me.tbxPostal.TabIndex = 4
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox11)
-        Me.GroupBox2.Controls.Add(Me.TextBox10)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
-        Me.GroupBox2.Controls.Add(Me.ComboBox2)
+        Me.GroupBox2.Controls.Add(Me.tbxMonth)
+        Me.GroupBox2.Controls.Add(Me.tbxYear)
+        Me.GroupBox2.Controls.Add(Me.txbCreditNumber)
+        Me.GroupBox2.Controls.Add(Me.cboCreditCard)
         Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Label11)
@@ -292,24 +294,24 @@ Partial Class Form2
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(42, 403)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(574, 165)
+        Me.GroupBox2.Size = New System.Drawing.Size(574, 149)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Financial Details"
         '
-        'TextBox11
+        'tbxMonth
         '
-        Me.TextBox11.Location = New System.Drawing.Point(332, 69)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(41, 21)
-        Me.TextBox11.TabIndex = 4
+        Me.tbxMonth.Location = New System.Drawing.Point(332, 69)
+        Me.tbxMonth.Name = "tbxMonth"
+        Me.tbxMonth.Size = New System.Drawing.Size(41, 21)
+        Me.tbxMonth.TabIndex = 4
         '
-        'TextBox10
+        'tbxYear
         '
-        Me.TextBox10.Location = New System.Drawing.Point(397, 69)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(41, 21)
-        Me.TextBox10.TabIndex = 4
+        Me.tbxYear.Location = New System.Drawing.Point(397, 69)
+        Me.tbxYear.Name = "tbxYear"
+        Me.tbxYear.Size = New System.Drawing.Size(41, 21)
+        Me.tbxYear.TabIndex = 4
         '
         'Label15
         '
@@ -359,11 +361,20 @@ Partial Class Form2
         Me.Button1.Text = "CHECKOUT"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'lblError
+        '
+        Me.lblError.AutoSize = True
+        Me.lblError.Location = New System.Drawing.Point(255, 564)
+        Me.lblError.Name = "lblError"
+        Me.lblError.Size = New System.Drawing.Size(0, 13)
+        Me.lblError.TabIndex = 10
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(687, 634)
+        Me.Controls.Add(Me.lblError)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -389,8 +400,8 @@ Partial Class Form2
     Friend WithEvents gboEnterDetails As GroupBox
     Friend WithEvents txbFName As TextBox
     Friend WithEvents txbLName As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents tbxEmail As TextBox
+    Friend WithEvents tbxaddress As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
@@ -398,20 +409,21 @@ Partial Class Form2
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cboCreditCard As ComboBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txbCreditNumber As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents tbxHouseNumber As TextBox
+    Friend WithEvents tbxTown As TextBox
+    Friend WithEvents tbxStreet As TextBox
+    Friend WithEvents tbxPostal As TextBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents tbxMonth As TextBox
+    Friend WithEvents tbxYear As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents lblError As Label
 End Class

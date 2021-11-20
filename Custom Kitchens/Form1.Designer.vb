@@ -37,10 +37,15 @@ Partial Class Form1
         Me.gbxKitchenStyles = New System.Windows.Forms.GroupBox()
         Me.lblRemind = New System.Windows.Forms.Label()
         Me.gbxAppliancesOptions = New System.Windows.Forms.GroupBox()
+        Me.btnProceed1 = New System.Windows.Forms.Button()
+        Me.lblShipping = New System.Windows.Forms.Label()
         Me.gbxAmount = New System.Windows.Forms.GroupBox()
         Me.lblTotalCost = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.gbxAppliances = New System.Windows.Forms.GroupBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.rdoShipping = New System.Windows.Forms.RadioButton()
+        Me.rdoInstallation = New System.Windows.Forms.RadioButton()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.lblInstallationPrice = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -58,7 +63,7 @@ Partial Class Form1
         Me.cboApp1 = New System.Windows.Forms.CheckBox()
         Me.btnPurchase = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.btnProceed = New System.Windows.Forms.Button()
+        Me.btnSelect = New System.Windows.Forms.Button()
         Me.gbxCountertops = New System.Windows.Forms.GroupBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -71,11 +76,6 @@ Partial Class Form1
         Me.lblLaminatePrice = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.gbxBox = New System.Windows.Forms.GroupBox()
-        Me.rdoInstallation = New System.Windows.Forms.RadioButton()
-        Me.rdoShipping = New System.Windows.Forms.RadioButton()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.lblShipping = New System.Windows.Forms.Label()
-        Me.btnProceed1 = New System.Windows.Forms.Button()
         Me.gbxCustomerDetails.SuspendLayout()
         Me.gbxKitchenStyles.SuspendLayout()
         Me.gbxAppliancesOptions.SuspendLayout()
@@ -222,7 +222,7 @@ Partial Class Form1
         Me.gbxKitchenStyles.Controls.Add(Me.lblRemind)
         Me.gbxKitchenStyles.Controls.Add(Me.gbxAppliancesOptions)
         Me.gbxKitchenStyles.Controls.Add(Me.Label13)
-        Me.gbxKitchenStyles.Controls.Add(Me.btnProceed)
+        Me.gbxKitchenStyles.Controls.Add(Me.btnSelect)
         Me.gbxKitchenStyles.Controls.Add(Me.gbxCountertops)
         Me.gbxKitchenStyles.Controls.Add(Me.gbxBox)
         Me.gbxKitchenStyles.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -257,6 +257,25 @@ Partial Class Form1
         Me.gbxAppliancesOptions.TabStop = False
         Me.gbxAppliancesOptions.Text = "Installation and Other Appliances (Optional)"
         Me.gbxAppliancesOptions.Visible = False
+        '
+        'btnProceed1
+        '
+        Me.btnProceed1.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnProceed1.Location = New System.Drawing.Point(138, 369)
+        Me.btnProceed1.Name = "btnProceed1"
+        Me.btnProceed1.Size = New System.Drawing.Size(75, 23)
+        Me.btnProceed1.TabIndex = 11
+        Me.btnProceed1.Text = "Proceed"
+        Me.btnProceed1.UseVisualStyleBackColor = True
+        Me.btnProceed1.Visible = False
+        '
+        'lblShipping
+        '
+        Me.lblShipping.AutoSize = True
+        Me.lblShipping.Location = New System.Drawing.Point(52, 421)
+        Me.lblShipping.Name = "lblShipping"
+        Me.lblShipping.Size = New System.Drawing.Size(0, 13)
+        Me.lblShipping.TabIndex = 10
         '
         'gbxAmount
         '
@@ -317,6 +336,38 @@ Partial Class Form1
         Me.gbxAppliances.TabIndex = 7
         Me.gbxAppliances.TabStop = False
         Me.gbxAppliances.Text = "Appliances"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(107, 227)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(40, 13)
+        Me.Label21.TabIndex = 16
+        Me.Label21.Text = "Ksh 95"
+        '
+        'rdoShipping
+        '
+        Me.rdoShipping.AutoSize = True
+        Me.rdoShipping.Location = New System.Drawing.Point(6, 228)
+        Me.rdoShipping.Name = "rdoShipping"
+        Me.rdoShipping.Size = New System.Drawing.Size(82, 17)
+        Me.rdoShipping.TabIndex = 15
+        Me.rdoShipping.TabStop = True
+        Me.rdoShipping.Text = "Shipping :"
+        Me.rdoShipping.UseVisualStyleBackColor = True
+        '
+        'rdoInstallation
+        '
+        Me.rdoInstallation.AutoSize = True
+        Me.rdoInstallation.Location = New System.Drawing.Point(6, 208)
+        Me.rdoInstallation.Name = "rdoInstallation"
+        Me.rdoInstallation.Size = New System.Drawing.Size(95, 17)
+        Me.rdoInstallation.TabIndex = 14
+        Me.rdoInstallation.TabStop = True
+        Me.rdoInstallation.Text = "Installation :"
+        Me.rdoInstallation.UseVisualStyleBackColor = True
         '
         'Label20
         '
@@ -492,15 +543,15 @@ Partial Class Form1
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "Styles"
         '
-        'btnProceed
+        'btnSelect
         '
-        Me.btnProceed.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProceed.Location = New System.Drawing.Point(97, 411)
-        Me.btnProceed.Name = "btnProceed"
-        Me.btnProceed.Size = New System.Drawing.Size(164, 23)
-        Me.btnProceed.TabIndex = 8
-        Me.btnProceed.Text = "Select Kitchen"
-        Me.btnProceed.UseVisualStyleBackColor = True
+        Me.btnSelect.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSelect.Location = New System.Drawing.Point(97, 411)
+        Me.btnSelect.Name = "btnSelect"
+        Me.btnSelect.Size = New System.Drawing.Size(164, 23)
+        Me.btnSelect.TabIndex = 8
+        Me.btnSelect.Text = "Select Kitchen"
+        Me.btnSelect.UseVisualStyleBackColor = True
         '
         'gbxCountertops
         '
@@ -635,57 +686,6 @@ Partial Class Form1
         Me.gbxBox.TabIndex = 7
         Me.gbxBox.TabStop = False
         '
-        'rdoInstallation
-        '
-        Me.rdoInstallation.AutoSize = True
-        Me.rdoInstallation.Location = New System.Drawing.Point(6, 208)
-        Me.rdoInstallation.Name = "rdoInstallation"
-        Me.rdoInstallation.Size = New System.Drawing.Size(95, 17)
-        Me.rdoInstallation.TabIndex = 14
-        Me.rdoInstallation.TabStop = True
-        Me.rdoInstallation.Text = "Installation :"
-        Me.rdoInstallation.UseVisualStyleBackColor = True
-        '
-        'rdoShipping
-        '
-        Me.rdoShipping.AutoSize = True
-        Me.rdoShipping.Location = New System.Drawing.Point(6, 228)
-        Me.rdoShipping.Name = "rdoShipping"
-        Me.rdoShipping.Size = New System.Drawing.Size(82, 17)
-        Me.rdoShipping.TabIndex = 15
-        Me.rdoShipping.TabStop = True
-        Me.rdoShipping.Text = "Shipping :"
-        Me.rdoShipping.UseVisualStyleBackColor = True
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(107, 227)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(40, 13)
-        Me.Label21.TabIndex = 16
-        Me.Label21.Text = "Ksh 95"
-        '
-        'lblShipping
-        '
-        Me.lblShipping.AutoSize = True
-        Me.lblShipping.Location = New System.Drawing.Point(52, 421)
-        Me.lblShipping.Name = "lblShipping"
-        Me.lblShipping.Size = New System.Drawing.Size(0, 13)
-        Me.lblShipping.TabIndex = 10
-        '
-        'btnProceed1
-        '
-        Me.btnProceed1.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProceed1.Location = New System.Drawing.Point(138, 369)
-        Me.btnProceed1.Name = "btnProceed1"
-        Me.btnProceed1.Size = New System.Drawing.Size(75, 23)
-        Me.btnProceed1.TabIndex = 11
-        Me.btnProceed1.Text = "Proceed"
-        Me.btnProceed1.UseVisualStyleBackColor = True
-        Me.btnProceed1.Visible = False
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -729,7 +729,7 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btnEnter As Button
-    Friend WithEvents btnProceed As Button
+    Friend WithEvents btnSelect As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
