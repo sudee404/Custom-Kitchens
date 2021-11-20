@@ -18,7 +18,6 @@
             Return False
         End If
     End Function
-
     Function verify() As String
         'this function verifies input by ensuring no characters except numbers can be accepted
         'create a msg variable to hold return type message
@@ -50,6 +49,7 @@
         'an empty string means a correct validation has occured
         Return msg
     End Function
+
     'creating a function that gets kitchen styles relating to dimensions given and budget
     Function getKitchenByDIm(ByVal length As Integer, ByVal width As Integer, ByVal budget As Integer, ByVal prices() As Integer, ByVal kitchenstyle() As String,
                              ByVal lengthArr() As Integer, ByVal widthArr() As Integer) As String()
@@ -78,7 +78,6 @@
         Dim widthsArray() As Integer = {180, 240, 350, 60, 60, 60, 450}
         Dim msg As String
 
-
         msg = verify()
         lblRemarks.Text = msg
         'checking if empty statement came back
@@ -89,16 +88,14 @@
             'else  new groupbox is loaded and made visible
             gbxKitchenStyles.Visible = True
 
-
-
-            'get 
+            'get all kitchen styles applicable to data given
             Dim chosen() As String = getKitchenByDIm(rmLength.Text, rmWidth.Text, rmBudget.Text, prices, kitchenStyle, lengthsArray, widthsArray)
 
             Dim top, left As Integer
             top = 10
             left = 6
             For counter = 0 To (chosen.Length - 1)
-
+                'create radiobuttons dynamically for user
                 Dim rdb As New RadioButton()
                 rdb.Text = chosen(counter)
                 rdb.Top = top
@@ -225,8 +222,6 @@
                 lblTotalCost.Text = $"{total}"
                 lblInstallationPrice.Text += $"{getInstallationCost()}"
 
-
-
             ElseIf rdbWoodBlk.Checked Then
                 counterTopPrice = Counterpricelist(1)
                 gbxAppliancesOptions.Visible = True
@@ -244,16 +239,12 @@
             Else
                 lblRemind.Text = "Please select a countertop to proceed"
 
-
             End If
         Else
             lblRemind.Text = "Please select a kitchen style to proceed"
             'add more code
 
         End If
-
-
-
 
     End Sub
 
@@ -318,7 +309,5 @@
         Me.Hide()
         Form2.Show()
     End Sub
-
-
 
 End Class
