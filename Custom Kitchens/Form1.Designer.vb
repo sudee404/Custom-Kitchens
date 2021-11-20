@@ -23,19 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.gbxCustomerDetails = New System.Windows.Forms.GroupBox()
-        Me.lblRange2 = New System.Windows.Forms.Label()
-        Me.lblRange3 = New System.Windows.Forms.Label()
-        Me.lblRange1 = New System.Windows.Forms.Label()
-        Me.lblBudget = New System.Windows.Forms.Label()
-        Me.lblWidth = New System.Windows.Forms.Label()
-        Me.lblLength = New System.Windows.Forms.Label()
-        Me.btnEnter = New System.Windows.Forms.Button()
-        Me.lblRemarks = New System.Windows.Forms.Label()
-        Me.rmBudget = New System.Windows.Forms.TextBox()
-        Me.rmWidth = New System.Windows.Forms.TextBox()
-        Me.rmLength = New System.Windows.Forms.TextBox()
         Me.gbxKitchenStyles = New System.Windows.Forms.GroupBox()
-        Me.lblRemind = New System.Windows.Forms.Label()
         Me.gbxAppliancesOptions = New System.Windows.Forms.GroupBox()
         Me.btnProceed1 = New System.Windows.Forms.Button()
         Me.lblShipping = New System.Windows.Forms.Label()
@@ -62,6 +50,7 @@ Partial Class Form1
         Me.cboApp2 = New System.Windows.Forms.CheckBox()
         Me.cboApp1 = New System.Windows.Forms.CheckBox()
         Me.btnPurchase = New System.Windows.Forms.Button()
+        Me.lblRemind = New System.Windows.Forms.Label()
         Me.lblStyles = New System.Windows.Forms.Label()
         Me.btnSelect = New System.Windows.Forms.Button()
         Me.gbxCountertops = New System.Windows.Forms.GroupBox()
@@ -76,6 +65,17 @@ Partial Class Form1
         Me.lblLaminatePrice = New System.Windows.Forms.Label()
         Me.lblPrices = New System.Windows.Forms.Label()
         Me.gbxBox = New System.Windows.Forms.GroupBox()
+        Me.lblRange2 = New System.Windows.Forms.Label()
+        Me.lblRange3 = New System.Windows.Forms.Label()
+        Me.lblRange1 = New System.Windows.Forms.Label()
+        Me.lblBudget = New System.Windows.Forms.Label()
+        Me.lblWidth = New System.Windows.Forms.Label()
+        Me.lblLength = New System.Windows.Forms.Label()
+        Me.btnEnter = New System.Windows.Forms.Button()
+        Me.lblRemarks = New System.Windows.Forms.Label()
+        Me.txbrmBudget = New System.Windows.Forms.TextBox()
+        Me.txbrmWidth = New System.Windows.Forms.TextBox()
+        Me.txbrmLength = New System.Windows.Forms.TextBox()
         Me.gbxCustomerDetails.SuspendLayout()
         Me.gbxKitchenStyles.SuspendLayout()
         Me.gbxAppliancesOptions.SuspendLayout()
@@ -95,9 +95,9 @@ Partial Class Form1
         Me.gbxCustomerDetails.Controls.Add(Me.lblLength)
         Me.gbxCustomerDetails.Controls.Add(Me.btnEnter)
         Me.gbxCustomerDetails.Controls.Add(Me.lblRemarks)
-        Me.gbxCustomerDetails.Controls.Add(Me.rmBudget)
-        Me.gbxCustomerDetails.Controls.Add(Me.rmWidth)
-        Me.gbxCustomerDetails.Controls.Add(Me.rmLength)
+        Me.gbxCustomerDetails.Controls.Add(Me.txbrmBudget)
+        Me.gbxCustomerDetails.Controls.Add(Me.txbrmWidth)
+        Me.gbxCustomerDetails.Controls.Add(Me.txbrmLength)
         Me.gbxCustomerDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbxCustomerDetails.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.gbxCustomerDetails.Location = New System.Drawing.Point(96, 27)
@@ -106,117 +106,6 @@ Partial Class Form1
         Me.gbxCustomerDetails.TabIndex = 0
         Me.gbxCustomerDetails.TabStop = False
         Me.gbxCustomerDetails.Text = "Customer Details"
-        '
-        'lblRange2
-        '
-        Me.lblRange2.AutoEllipsis = True
-        Me.lblRange2.AutoSize = True
-        Me.lblRange2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRange2.Location = New System.Drawing.Point(161, 128)
-        Me.lblRange2.Name = "lblRange2"
-        Me.lblRange2.Size = New System.Drawing.Size(67, 15)
-        Me.lblRange2.TabIndex = 15
-        Me.lblRange2.Text = "(120 - 600)"
-        '
-        'lblRange3
-        '
-        Me.lblRange3.AutoEllipsis = True
-        Me.lblRange3.AutoSize = True
-        Me.lblRange3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRange3.Location = New System.Drawing.Point(152, 186)
-        Me.lblRange3.Name = "lblRange3"
-        Me.lblRange3.Size = New System.Drawing.Size(88, 15)
-        Me.lblRange3.TabIndex = 14
-        Me.lblRange3.Text = "(1000 - 25000)"
-        '
-        'lblRange1
-        '
-        Me.lblRange1.AutoEllipsis = True
-        Me.lblRange1.AutoSize = True
-        Me.lblRange1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRange1.Location = New System.Drawing.Point(161, 73)
-        Me.lblRange1.Name = "lblRange1"
-        Me.lblRange1.Size = New System.Drawing.Size(67, 15)
-        Me.lblRange1.TabIndex = 13
-        Me.lblRange1.Text = "(150 - 600)"
-        '
-        'lblBudget
-        '
-        Me.lblBudget.AutoSize = True
-        Me.lblBudget.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBudget.Location = New System.Drawing.Point(35, 167)
-        Me.lblBudget.Name = "lblBudget"
-        Me.lblBudget.Size = New System.Drawing.Size(51, 14)
-        Me.lblBudget.TabIndex = 12
-        Me.lblBudget.Text = "Budget :"
-        '
-        'lblWidth
-        '
-        Me.lblWidth.AutoSize = True
-        Me.lblWidth.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWidth.Location = New System.Drawing.Point(35, 109)
-        Me.lblWidth.Name = "lblWidth"
-        Me.lblWidth.Size = New System.Drawing.Size(48, 14)
-        Me.lblWidth.TabIndex = 11
-        Me.lblWidth.Text = "Width  :"
-        '
-        'lblLength
-        '
-        Me.lblLength.AutoSize = True
-        Me.lblLength.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLength.Location = New System.Drawing.Point(35, 54)
-        Me.lblLength.Name = "lblLength"
-        Me.lblLength.Size = New System.Drawing.Size(50, 14)
-        Me.lblLength.TabIndex = 10
-        Me.lblLength.Text = "Length :"
-        '
-        'btnEnter
-        '
-        Me.btnEnter.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEnter.Location = New System.Drawing.Point(97, 243)
-        Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(164, 23)
-        Me.btnEnter.TabIndex = 9
-        Me.btnEnter.Text = "Enter Specifications"
-        Me.btnEnter.UseVisualStyleBackColor = True
-        '
-        'lblRemarks
-        '
-        Me.lblRemarks.AutoEllipsis = True
-        Me.lblRemarks.AutoSize = True
-        Me.lblRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRemarks.Location = New System.Drawing.Point(94, 338)
-        Me.lblRemarks.Name = "lblRemarks"
-        Me.lblRemarks.Size = New System.Drawing.Size(0, 15)
-        Me.lblRemarks.TabIndex = 7
-        '
-        'rmBudget
-        '
-        Me.rmBudget.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rmBudget.Location = New System.Drawing.Point(138, 162)
-        Me.rmBudget.Name = "rmBudget"
-        Me.rmBudget.Size = New System.Drawing.Size(123, 21)
-        Me.rmBudget.TabIndex = 5
-        Me.rmBudget.Text = "25000"
-        '
-        'rmWidth
-        '
-        Me.rmWidth.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rmWidth.Location = New System.Drawing.Point(138, 104)
-        Me.rmWidth.Name = "rmWidth"
-        Me.rmWidth.Size = New System.Drawing.Size(123, 21)
-        Me.rmWidth.TabIndex = 4
-        Me.rmWidth.Text = "200"
-        '
-        'rmLength
-        '
-        Me.rmLength.CausesValidation = False
-        Me.rmLength.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rmLength.Location = New System.Drawing.Point(138, 49)
-        Me.rmLength.Name = "rmLength"
-        Me.rmLength.Size = New System.Drawing.Size(123, 21)
-        Me.rmLength.TabIndex = 3
-        Me.rmLength.Text = "520"
         '
         'gbxKitchenStyles
         '
@@ -234,14 +123,6 @@ Partial Class Form1
         Me.gbxKitchenStyles.TabStop = False
         Me.gbxKitchenStyles.Text = "Kitchen Selection"
         Me.gbxKitchenStyles.Visible = False
-        '
-        'lblRemind
-        '
-        Me.lblRemind.AutoSize = True
-        Me.lblRemind.Location = New System.Drawing.Point(41, 372)
-        Me.lblRemind.Name = "lblRemind"
-        Me.lblRemind.Size = New System.Drawing.Size(0, 15)
-        Me.lblRemind.TabIndex = 9
         '
         'gbxAppliancesOptions
         '
@@ -534,6 +415,14 @@ Partial Class Form1
         Me.btnPurchase.Text = "Purchase"
         Me.btnPurchase.UseVisualStyleBackColor = True
         '
+        'lblRemind
+        '
+        Me.lblRemind.AutoSize = True
+        Me.lblRemind.Location = New System.Drawing.Point(41, 372)
+        Me.lblRemind.Name = "lblRemind"
+        Me.lblRemind.Size = New System.Drawing.Size(0, 15)
+        Me.lblRemind.TabIndex = 9
+        '
         'lblStyles
         '
         Me.lblStyles.AutoSize = True
@@ -687,6 +576,117 @@ Partial Class Form1
         Me.gbxBox.TabIndex = 7
         Me.gbxBox.TabStop = False
         '
+        'lblRange2
+        '
+        Me.lblRange2.AutoEllipsis = True
+        Me.lblRange2.AutoSize = True
+        Me.lblRange2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRange2.Location = New System.Drawing.Point(161, 128)
+        Me.lblRange2.Name = "lblRange2"
+        Me.lblRange2.Size = New System.Drawing.Size(67, 15)
+        Me.lblRange2.TabIndex = 15
+        Me.lblRange2.Text = "(120 - 600)"
+        '
+        'lblRange3
+        '
+        Me.lblRange3.AutoEllipsis = True
+        Me.lblRange3.AutoSize = True
+        Me.lblRange3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRange3.Location = New System.Drawing.Point(152, 186)
+        Me.lblRange3.Name = "lblRange3"
+        Me.lblRange3.Size = New System.Drawing.Size(88, 15)
+        Me.lblRange3.TabIndex = 14
+        Me.lblRange3.Text = "(1000 - 25000)"
+        '
+        'lblRange1
+        '
+        Me.lblRange1.AutoEllipsis = True
+        Me.lblRange1.AutoSize = True
+        Me.lblRange1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRange1.Location = New System.Drawing.Point(161, 73)
+        Me.lblRange1.Name = "lblRange1"
+        Me.lblRange1.Size = New System.Drawing.Size(67, 15)
+        Me.lblRange1.TabIndex = 13
+        Me.lblRange1.Text = "(150 - 600)"
+        '
+        'lblBudget
+        '
+        Me.lblBudget.AutoSize = True
+        Me.lblBudget.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBudget.Location = New System.Drawing.Point(35, 167)
+        Me.lblBudget.Name = "lblBudget"
+        Me.lblBudget.Size = New System.Drawing.Size(51, 14)
+        Me.lblBudget.TabIndex = 12
+        Me.lblBudget.Text = "Budget :"
+        '
+        'lblWidth
+        '
+        Me.lblWidth.AutoSize = True
+        Me.lblWidth.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWidth.Location = New System.Drawing.Point(35, 109)
+        Me.lblWidth.Name = "lblWidth"
+        Me.lblWidth.Size = New System.Drawing.Size(48, 14)
+        Me.lblWidth.TabIndex = 11
+        Me.lblWidth.Text = "Width  :"
+        '
+        'lblLength
+        '
+        Me.lblLength.AutoSize = True
+        Me.lblLength.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLength.Location = New System.Drawing.Point(35, 54)
+        Me.lblLength.Name = "lblLength"
+        Me.lblLength.Size = New System.Drawing.Size(50, 14)
+        Me.lblLength.TabIndex = 10
+        Me.lblLength.Text = "Length :"
+        '
+        'btnEnter
+        '
+        Me.btnEnter.Font = New System.Drawing.Font("Microsoft YaHei", 8.85!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEnter.Location = New System.Drawing.Point(97, 243)
+        Me.btnEnter.Name = "btnEnter"
+        Me.btnEnter.Size = New System.Drawing.Size(164, 23)
+        Me.btnEnter.TabIndex = 9
+        Me.btnEnter.Text = "Enter Specifications"
+        Me.btnEnter.UseVisualStyleBackColor = True
+        '
+        'lblRemarks
+        '
+        Me.lblRemarks.AutoEllipsis = True
+        Me.lblRemarks.AutoSize = True
+        Me.lblRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRemarks.Location = New System.Drawing.Point(94, 338)
+        Me.lblRemarks.Name = "lblRemarks"
+        Me.lblRemarks.Size = New System.Drawing.Size(0, 15)
+        Me.lblRemarks.TabIndex = 7
+        '
+        'txbrmBudget
+        '
+        Me.txbrmBudget.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txbrmBudget.Location = New System.Drawing.Point(138, 162)
+        Me.txbrmBudget.Name = "txbrmBudget"
+        Me.txbrmBudget.Size = New System.Drawing.Size(123, 21)
+        Me.txbrmBudget.TabIndex = 5
+        Me.txbrmBudget.Text = "25000"
+        '
+        'txbrmWidth
+        '
+        Me.txbrmWidth.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txbrmWidth.Location = New System.Drawing.Point(138, 104)
+        Me.txbrmWidth.Name = "txbrmWidth"
+        Me.txbrmWidth.Size = New System.Drawing.Size(123, 21)
+        Me.txbrmWidth.TabIndex = 4
+        Me.txbrmWidth.Text = "200"
+        '
+        'txbrmLength
+        '
+        Me.txbrmLength.CausesValidation = False
+        Me.txbrmLength.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txbrmLength.Location = New System.Drawing.Point(138, 49)
+        Me.txbrmLength.Name = "txbrmLength"
+        Me.txbrmLength.Size = New System.Drawing.Size(123, 21)
+        Me.txbrmLength.TabIndex = 3
+        Me.txbrmLength.Text = "520"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -713,9 +713,9 @@ Partial Class Form1
 
     Friend WithEvents gbxCustomerDetails As GroupBox
     Friend WithEvents lblRemarks As Label
-    Friend WithEvents rmBudget As TextBox
-    Friend WithEvents rmWidth As TextBox
-    Friend WithEvents rmLength As TextBox
+    Friend WithEvents txbrmBudget As TextBox
+    Friend WithEvents txbrmWidth As TextBox
+    Friend WithEvents txbrmLength As TextBox
     Friend WithEvents gbxKitchenStyles As GroupBox
     Friend WithEvents gbxBox As GroupBox
     Friend WithEvents gbxAppliancesOptions As GroupBox

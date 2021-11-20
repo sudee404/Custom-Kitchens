@@ -27,9 +27,9 @@
         msg = " "
         'catch and raise exceptions with a try statement
         Try
-            length = rmLength.Text
-            width = rmWidth.Text
-            budget = rmBudget.Text
+            length = txbrmLength.Text
+            width = txbrmWidth.Text
+            budget = txbrmBudget.Text
             'throw an exception when validateData() function returns as True
             If (validateData(length, width, budget)) Then
                 Throw New Exception("Enter values within applicable ranges")
@@ -89,7 +89,7 @@
             gbxKitchenStyles.Visible = True
 
             'get all kitchen styles applicable to data given
-            Dim chosen() As String = getKitchenByDIm(rmLength.Text, rmWidth.Text, rmBudget.Text, prices, kitchenStyle, lengthsArray, widthsArray)
+            Dim chosen() As String = getKitchenByDIm(txbrmLength.Text, txbrmWidth.Text, txbrmBudget.Text, prices, kitchenStyle, lengthsArray, widthsArray)
 
             Dim top, left As Integer
             top = 10
